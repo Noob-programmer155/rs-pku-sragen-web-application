@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/',[HomeController::class,'home']);
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login',[HomeController::class,'login']);
+// Route::post('/login',[HomeController::class,'login_post']);
+
+Route::get('/signup',[HomeController::class,'signIn']);
+
+Route::get('/service/{}',[HomeController::class,'signIn']);
+
+Route::get('/department/{}',[HomeController::class,'signIn']);
+
+Route::get('/our-doctors',[HomeController::class,'signIn']);
+
+Route::get('/about-us',[HomeController::class,'signIn']);
+
+Route::get('/our-blog',[HomeController::class,'signIn']);
+
+Route::get('/contact',[HomeController::class,'signIn']);
+
+Route::get('/make-appointment',[HomeController::class,'signIn']);
