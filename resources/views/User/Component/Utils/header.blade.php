@@ -7,25 +7,24 @@
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.svg" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('images/favicon.svg') }}" />
 
         <!-- Fonts css -->
-        <link href="/css/fonts2.css" rel="stylesheet" />
-        <link href="/css/fonts3.css" rel="stylesheet" />
-
+        <link href="{{asset('css/fonts2.css')}}" rel="stylesheet" />
+        <link href="{{asset('css/fonts3.css')}}" rel="stylesheet" />
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" />
         <!-- LineIcons css -->
-        <link rel="stylesheet" href="/css/LineIcons.2.0.css" />
+        <link rel="stylesheet" href="{{asset('css/LineIcons.2.0.css')}}" />
         <!-- Animate css -->
-        <link rel="stylesheet" href="/css/animate.css" />
+        <link rel="stylesheet" href="{{asset('css/animate.css')}}" />
         <!-- Tiny-slider css -->
-        <link rel="stylesheet" href="/css/tiny-slider.css" />
+        <link rel="stylesheet" href="{{asset('css/tiny-slider.css')}}" />
         <!--Glightbox  -->
-        <link rel="stylesheet" href="/css/glightbox.min.css" />
+        <link rel="stylesheet" href="{{asset('css/glightbox.min.css')}}" />
         <!-- Main css -->
-        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="{{asset('css/main.css')}}" />
     </head>
     <body>
         <div class="preloader">

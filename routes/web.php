@@ -25,11 +25,17 @@ Route::get('/service/{}',[HomeController::class,'signIn']);
 
 Route::get('/department/{}',[HomeController::class,'signIn']);
 
+Route::get('/projects/{}',[HomeController::class,'signIn']);
+
 Route::get('/our-doctors',[HomeController::class,'signIn']);
+
+Route::get('/doctors/{}',[HomeController::class,'signIn']);
 
 Route::get('/about-us',[HomeController::class,'signIn']);
 
 Route::get('/our-blog',[HomeController::class,'signIn']);
+
+Route::get('/blog/{}',[HomeController::class,'signIn']);
 
 Route::get('/contact',[HomeController::class,'signIn']);
 
