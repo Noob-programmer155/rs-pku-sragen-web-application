@@ -1,23 +1,33 @@
 @import "https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 html {
   scroll-behavior: smooth;
+  font-size: 12px;
 }
 
 body {
-  font-family: poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #888;
   overflow-x: hidden;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 p {
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 26px;
+}
+
+a,li{
+  font-size: 1rem;
+}
+
+i{
+  font-size: 1.2rem;
 }
 
 * {
@@ -98,6 +108,12 @@ video {
   vertical-align: middle;
 }
 
+table,
+td,
+th {
+  font-family: 'Poppins', sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -120,27 +136,27 @@ h6 a {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 3rem;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 2.2rem;
 }
 
 h4 {
-  font-size: 25px;
+  font-size: 1.8rem;
 }
 
 h5 {
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 1.2rem;
 }
 
 ul,
@@ -907,7 +923,7 @@ ol {
 }
 
 .breadcrumbs .breadcrumbs-content .page-title {
-  font-size: 32px;
+  font-size: 2.5rem;
   color: #fff;
   font-weight: 600;
   position: relative;
@@ -938,7 +954,7 @@ ol {
 .breadcrumbs .breadcrumb-nav li:after {
   content: "\ea5c";
   font-family: lineIcons;
-  font-size: 10px;
+  font-size: .85rem;
   position: absolute;
   top: 4px;
   right: -7px;
@@ -956,7 +972,7 @@ ol {
 .breadcrumbs .breadcrumb-nav li,
 .breadcrumbs .breadcrumb-nav li a {
   color: #fff;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -983,7 +999,7 @@ ol {
 }
 
 .section-title h3 {
-  font-size: 80px;
+  font-size: 6rem;
   font-weight: 700;
   text-transform: uppercase;
   position: absolute;
@@ -998,7 +1014,7 @@ ol {
 }
 
 .section-title h2 {
-  font-size: 35px;
+  font-size: 2.8rem;
   margin-bottom: 20px;
   line-height: 48px;
   text-transform: capitalize;
@@ -1020,7 +1036,7 @@ ol {
 }
 
 .section-title p {
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 26px;
 }
 
@@ -1067,7 +1083,7 @@ ol {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 1rem;
   color: #fff !important;
   border-radius: 0;
   position: fixed;
@@ -1144,7 +1160,7 @@ ol {
   background: #fff;
   color: #081828;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1rem;
   border-radius: 0;
   padding: 8px 20px;
   text-align: center;
@@ -1160,7 +1176,7 @@ ol {
 }
 
 .pagination .pagination-list li a i {
-  font-size: 13px;
+  font-size: 1.2rem;
 }
 
 .blog-grids.pagination {
@@ -1171,7 +1187,7 @@ ol {
 .button .btn {
   display: inline-block;
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 500;
   padding: 15px 30px;
   background-color: #88c250;
@@ -1341,7 +1357,7 @@ ol {
 }
 
 .header .top-bar .top-contact ul li i {
-  font-size: 15px;
+  font-size: 1rem;
   display: inline-block;
   margin-right: 4px;
   color: #fff;
@@ -1376,7 +1392,7 @@ ol {
 
 .header .top-bar .login-button ul li a {
   color: #fff;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -1388,7 +1404,7 @@ ol {
   display: inline-block;
   color: #fff;
   margin-right: 4px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .header .top-bar .right-content {
@@ -1416,7 +1432,7 @@ ol {
 
 .header .top-bar .top-social ul li a {
   color: #fff;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .header .nav-inner {
@@ -1602,7 +1618,7 @@ ol {
 }
 
 .navbar-nav .nav-item a {
-  font-size: 14px;
+  font-size: 1rem;
   color: #081828;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
@@ -1650,6 +1666,9 @@ ol {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  html {
+    font-size: 15px;
+  }
   .navbar-nav .nav-item a.dd-menu {
     padding-right: 30px;
   }
@@ -1660,7 +1679,7 @@ ol {
   font: normal normal normal 1em/1 "LineIcons";
   position: absolute;
   right: 17px;
-  font-size: 10px;
+  font-size: .85rem;
   top: 50%;
   margin-left: 5px;
   margin-top: 0;
@@ -1736,7 +1755,7 @@ ol {
   color: #888;
   display: block;
   width: 100%;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
   text-transform: capitalize;
   position: relative;
@@ -1843,7 +1862,7 @@ ol {
   font-weight: 400;
   display: block;
   padding: 12px 15px;
-  font-size: 14px;
+  font-size: 1rem;
   color: #222;
   font-weight: 400;
 }
@@ -1892,7 +1911,7 @@ ol {
 }
 
 .add-list-button .btn i {
-  font-size: 14px;
+  font-size: 1rem;
   display: inline-block;
   margin-right: 5px;
 }
@@ -1973,7 +1992,7 @@ ol {
   cursor: pointer;
   z-index: 2;
   color: #fff;
-  font-size: 14px;
+  font-size: 1rem;
   background: 0 0;
   border: none;
   border-radius: 50%;
@@ -2038,7 +2057,7 @@ ol {
 
 .hero-area .hero-text h2 {
   color: #fff;
-  font-size: 38px;
+  font-size: 3.2rem;
   line-height: 55px;
   font-weight: 700;
   margin-bottom: 30px;
@@ -2047,7 +2066,7 @@ ol {
 
 .hero-area .hero-text p {
   color: #ddd;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
   display: block;
 }
@@ -2094,7 +2113,7 @@ ol {
   top: 50%;
   margin-left: -40px;
   margin-top: -80px;
-  font-size: 16px;
+  font-size: 1.3rem;
   padding-left: 3px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -2184,7 +2203,7 @@ ol {
   display: inline-block;
   margin-bottom: 10px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1rem;
   color: #fff;
   background-color: #88c250;
   padding: 5px 20px;
@@ -2193,7 +2212,7 @@ ol {
 
 .about-us .content-right h2 {
   display: block;
-  font-size: 32px;
+  font-size: 2.5rem;
   margin-bottom: 25px;
   line-height: 45px;
   text-transform: capitalize;
@@ -2202,7 +2221,7 @@ ol {
 }
 
 .about-us .content-right h3 {
-  font-size: 22px;
+  font-size: 1.8rem;
   margin-top: 40px;
   margin-bottom: 8px;
   line-height: 45px;
@@ -2212,7 +2231,7 @@ ol {
 }
 
 .about-us .content-right p {
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 26px;
 }
 
@@ -2223,7 +2242,7 @@ ol {
 .about-us .content-right .list li {
   display: block;
   margin-bottom: 12px;
-  font-size: 14px;
+  font-size: 1rem;
   color: #777;
   padding-left: 30px;
   position: relative;
@@ -2231,7 +2250,7 @@ ol {
 
 .about-us .content-right .list li i {
   color: #88c250;
-  font-size: 18px;
+  font-size: 1.4rem;
   display: inline-block;
   position: absolute;
   left: 0;
@@ -2267,13 +2286,13 @@ ol {
   display: inline-block;
   border-radius: 5px;
   background-color: #fff;
-  font-size: 25px;
+  font-size: 2.1rem;
   color: #49b0c1;
   margin-bottom: 25px;
 }
 
 .our-achievement .single-achievement h3 {
-  font-size: 30px;
+  font-size: 2.4rem;
   font-weight: 700;
   display: block;
   margin-bottom: 5px;
@@ -2281,7 +2300,7 @@ ol {
 }
 
 .our-achievement .single-achievement p {
-  font-size: 14px;
+  font-size: 1rem;
   color: #fff;
   font-weight: 500;
 }
@@ -2297,7 +2316,7 @@ ol {
 
 .testimonials.style2 .section-title h3 {
   opacity: 0.4;
-  font-size: 70px;
+  font-size: 5.8rem;
 }
 
 .testimonials.style2 .section-title h2 {
@@ -2319,13 +2338,13 @@ ol {
 
 .testimonials.style2 .single-testimonial .text .quote-icon i {
   color: #49b0c1;
-  font-size: 35px;
+  font-size: 2.8rem;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
 .testimonials.style2 .single-testimonial .text p {
-  font-size: 14px;
+  font-size: 1rem;
   color: #888;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -2372,7 +2391,7 @@ ol {
 
 .testimonials .section-title h3 {
   opacity: 0.1;
-  font-size: 70px;
+  font-size: 5.8rem;
 }
 
 .testimonials .section-title h2 {
@@ -2450,7 +2469,7 @@ ol {
 }
 
 .testimonials .single-testimonial .author .name {
-  font-size: 16px;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #fff;
   margin-top: 10px;
@@ -2459,7 +2478,7 @@ ol {
 .testimonials .single-testimonial .author .name .deg {
   display: block;
   margin-top: 8px;
-  font-size: 13px;
+  font-size: 1.2rem;
   font-weight: 400;
   color: #fff;
 }
@@ -2479,13 +2498,13 @@ ol {
 
 .testimonials .single-testimonial .text .quote-icon i {
   color: #fff;
-  font-size: 35px;
+  font-size: 2.8rem;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
 .testimonials .single-testimonial .text p {
-  font-size: 14px;
+  font-size: 1rem;
   color: #fff;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -2522,7 +2541,7 @@ ol {
   position: absolute;
   right: 0;
   top: 0;
-  font-size: 30px;
+  font-size: 2.4rem;
   color: #fff;
   opacity: 1;
   background-color: #88c250;
@@ -2557,7 +2576,7 @@ ol {
 }
 
 .pricing-table .single-table .table-head .amount {
-  font-size: 35px;
+  font-size: 2.8rem;
   line-height: 45px;
   font-weight: 600;
   color: #081828;
@@ -2565,7 +2584,7 @@ ol {
 
 .pricing-table .single-table .table-head .duration {
   color: #081828;
-  font-size: 13px;
+  font-size: 1.2rem;
   font-weight: 400;
   display: inline-block;
   position: relative;
@@ -2574,7 +2593,7 @@ ol {
 }
 
 .pricing-table .single-table .table-head .title {
-  font-size: 18px;
+  font-size: 1.4rem;
   line-height: 26px;
   color: #88c250;
   font-weight: 500;
@@ -2591,7 +2610,7 @@ ol {
 .pricing-table .single-table .table-list li {
   position: relative;
   display: block;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 26px;
   font-weight: 400;
   padding: 15px 0;
@@ -2620,7 +2639,7 @@ ol {
 
 .accordion-item .accordion-button {
   border-radius: 0;
-  font-size: 17px;
+  font-size: 1.5rem;
   font-weight: 500;
   width: 100%;
   display: block;
@@ -2630,7 +2649,7 @@ ol {
 }
 
 .accordion-item .accordion-button .title {
-  font-size: 15px;
+  font-size: 1.3rem;
   position: relative;
   font-weight: 600;
   float: left;
@@ -2646,12 +2665,12 @@ ol {
   border-radius: 50%;
   border: 1px solid #eee;
   margin-right: 10px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .accordion-item .accordion-button i {
   float: right;
-  font-size: 13px;
+  font-size: 1.2rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   position: relative;
@@ -2697,7 +2716,7 @@ ol {
 .accordion-body p {
   margin: 0;
   margin-bottom: 20px;
-  font-size: 15px;
+  font-size: 1.3rem;
 }
 
 .accordion-body p:last-child {
@@ -2706,6 +2725,28 @@ ol {
 
 .accordion-item {
   margin-bottom: 20px;
+}
+
+.latest-news-area {
+  display: flex;
+}
+
+.latest-news-area a {
+  color: #25d2e6;
+  margin-top: 10px;
+  font-size: 1.4rem;
+  width: 100%;
+  text-align: right;
+  transition: all .5;
+}
+
+.latest-news-area .subcontainer{
+  position: relative;
+  overflow: auto;
+}
+
+.latest-news-area a:hover {
+  color: #2c6ad4;
 }
 
 .latest-news-area .single-news {
@@ -2723,8 +2764,12 @@ ol {
 }
 
 .latest-news-area .single-news .image {
+  margin-top: 0px;
+  padding-top: 0px;
   overflow: hidden;
+  display: flex;
   width: 100%;
+  border-radius: 5px 0 0 5px;
 }
 
 .latest-news-area .single-news.style2  .image {
@@ -2733,9 +2778,19 @@ ol {
 
 .latest-news-area .single-news .image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  border-radius: 5px 0 0 5px;
+}
+
+.latest-news-area .single-news .image a {
+  margin-top: 0px;
+}
+
+.latest-news-area .single-news:hover {
+  box-shadow: 0px 0px 50px -30px #000000;
 }
 
 .latest-news-area .single-news:hover .image img {
@@ -2758,7 +2813,8 @@ ol {
 }
 
 .latest-news-area .single-news .content .title a {
-  font-size: 17px;
+  font-size: 1.5rem;
+  text-align: left;
   font-weight: 600;
   color: #081828;
 }
@@ -2779,7 +2835,7 @@ ol {
 
 .latest-news-area .single-news .content p {
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 22px;
 }
 
@@ -2788,7 +2844,7 @@ ol {
 }
 
 .latest-news-area .single-news .content .meta-info li {
-  font-size: 15px;
+  font-size: 1.3rem;
   display: block;
   text-align: right;
   margin-bottom: 10px;
@@ -2800,7 +2856,7 @@ ol {
 
 .latest-news-area .single-news .content .meta-info li a {
   color: #888;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .latest-news-area .single-news .content .meta-info li a:hover {
@@ -2812,12 +2868,17 @@ ol {
   width: 30px;
   border-radius: 50%;
   display: inline-block;
+  object-fit: cover;
+  object-position: center;
   margin-right: 4px;
+}
+
+.latest-news-area .single-news.style2 {
+  float: left;
 }
 
 .latest-news-area .single-news.style2 .content {
   border: none;
-  padding: 0;
   padding: 35px;
   background-color: #49b0c1;
   padding-top: 25px;
@@ -2849,6 +2910,7 @@ ol {
 
 .latest-news-area .single-news.style2 .content .meta-info{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -2863,9 +2925,8 @@ ol {
 }
 
 .latest-news-area .single-news.style2 .content .meta-info li a{
-  display: flex;
   color: #fff;
-  align-items: center;
+  margin-bottom: 10px;
 }
 
 .latest-news-area .single-news.style2 .content .meta-info li a:hover {
@@ -2893,7 +2954,7 @@ ol {
 }
 
 .blog-single .meta-info li {
-  font-size: 15px;
+  font-size: 1.3rem;
   display: inline-block;
   margin-right: 15px;
 }
@@ -2904,7 +2965,7 @@ ol {
 
 .blog-single .meta-info li a {
   color: #888;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .blog-single .meta-info li a i {
@@ -2950,7 +3011,7 @@ ol {
 }
 
 .blog-single .post-title a {
-  font-size: 22px;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -2959,13 +3020,13 @@ ol {
 }
 
 .blog-single p {
-  font-size: 14px;
+  font-size: 1rem;
   margin: 20px 0;
   line-height: 26px;
 }
 
 .blog-single h3 {
-  font-size: 20px;
+  font-size: 1.6rem;
   margin-bottom: 20px;
   font-weight: 600;
   line-height: 28px;
@@ -2991,7 +3052,7 @@ ol {
   left: 0;
   top: 1px;
   color: #fff;
-  font-size: 7px;
+  font-size: .6rem;
   height: 18px;
   width: 18px;
   background: #49b0c1;
@@ -3016,7 +3077,7 @@ blockquote {
 }
 
 blockquote .icon i {
-  font-size: 32px;
+  font-size: 2.5rem;
   color: #fff;
   display: block;
   margin-bottom: 20px;
@@ -3024,13 +3085,13 @@ blockquote .icon i {
 
 blockquote h4 {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 24px;
   color: #fff;
 }
 
 blockquote span {
-  font-size: 13px;
+  font-size: 1.2rem;
   display: block;
   margin-top: 20px;
 }
@@ -3051,7 +3112,7 @@ blockquote .shape {
 .post-social-media .share-title {
   margin-bottom: 20px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.4rem;
   display: inline-block;
 }
 
@@ -3066,7 +3127,7 @@ blockquote .shape {
 }
 
 .post-details .post-social-media ul li a {
-  font-size: 14px;
+  font-size: 1rem;
   color: #999;
   position: relative;
 }
@@ -3078,7 +3139,7 @@ blockquote .shape {
 .post-details .post-social-media ul li a span {
   background-color: #49b0c1;
   color: #fff;
-  font-size: 12px;
+  font-size: 1rem;
   font-weight: 400;
   padding: 4px 10px;
   border-radius: 0;
@@ -3120,7 +3181,7 @@ blockquote .shape {
 }
 
 .comment-title {
-  font-size: 20px !important;
+  font-size: 1.6rem !important;
   font-weight: 600 !important;
   margin-bottom: 40px !important;
   position: relative;
@@ -3131,7 +3192,7 @@ blockquote .shape {
 .post-comments .comments-list li {
   padding-left: 110px;
   position: relative;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .post-comments .comments-list li .comment-img {
@@ -3154,13 +3215,13 @@ blockquote .shape {
 }
 
 .post-comments .comments-list li .comment-desc .desc-top h6 {
-  font-size: 16px;
+  font-size: 1.3rem;
   margin-bottom: 8px;
   font-weight: 500;
 }
 
 .post-comments .comments-list li .comment-desc .desc-top span.date {
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -3172,7 +3233,7 @@ blockquote .shape {
   transform: translateY(-50%);
   padding: 8px 20px;
   display: inline-block;
-  font-size: 13px;
+  font-size: 1.2rem;
   font-weight: 400;
   z-index: 2;
   border-radius: 5px;
@@ -3193,7 +3254,7 @@ blockquote .shape {
 .post-comments .comments-list li .comment-desc p {
   font-weight: 400;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .post-comments .comments-list li.children {
@@ -3215,7 +3276,7 @@ blockquote .shape {
 }
 
 .comment-reply-title {
-  font-size: 20px !important;
+  font-size: 1.6rem !important;
   font-weight: 600 !important;
   margin-bottom: 40px !important;
   position: relative;
@@ -3231,13 +3292,13 @@ blockquote .shape {
   position: absolute;
   top: 17px;
   right: 25px;
-  font-size: 16px;
+  font-size: 1.3rem;
 }
 
 .comment-form form .form-box .form-control-custom {
   border: none;
   background: #fff;
-  font-size: 14px;
+  font-size: 1rem;
   color: #081828;
   padding: 0 25px;
   font-weight: 500;
@@ -3245,7 +3306,7 @@ blockquote .shape {
   border: 1px solid #eee;
   margin-bottom: 20px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -3255,28 +3316,28 @@ blockquote .shape {
 }
 
 .comment-form form .form-box .form-control-custom::-webkit-input-placeholder {
-  font-size: 14px;
+  font-size: 1rem;
   color: #888;
   font-weight: 400;
   padding: 25px !important;
 }
 
 .comment-form form .form-box .form-control-custom:-ms-input-placeholder {
-  font-size: 14px;
+  font-size: 1rem;
   color: #888;
   font-weight: 400;
   padding: 25px !important;
 }
 
 .comment-form form .form-box .form-control-custom::-ms-input-placeholder {
-  font-size: 14px;
+  font-size: 1rem;
   color: #888;
   font-weight: 400;
   padding: 25px !important;
 }
 
 .comment-form form .form-box .form-control-custom::placeholder {
-  font-size: 14px;
+  font-size: 1rem;
   color: #888;
   font-weight: 400;
   padding: 25px !important;
@@ -3297,7 +3358,7 @@ blockquote .shape {
 }
 
 .sidebar .widget .widget-title {
-  font-size: 18px;
+  font-size: 1.4rem;
   margin-bottom: 40px;
   position: relative;
   font-weight: 600;
@@ -3315,7 +3376,7 @@ blockquote .shape {
   height: 55px;
   border: none;
   padding: 0 80px 0 30px;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
   border-radius: 5px;
   border: 1px solid #eee;
@@ -3346,7 +3407,7 @@ blockquote .shape {
   height: 42px;
   z-index: 1;
   color: #fff !important;
-  font-size: 13px;
+  font-size: 1.2rem;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   color: #fff;
@@ -3403,9 +3464,9 @@ blockquote .shape {
 }
 
 .sidebar .widget.popular-feeds .single-popular-feed .feed-desc .post-title a {
-  font-size: 13px;
+  font-size: 1.2rem;
   font-weight: 500;
-  font-family: poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .sidebar
@@ -3419,7 +3480,7 @@ blockquote .shape {
 
 .sidebar .widget.popular-feeds .single-popular-feed .feed-desc .time {
   font-weight: 400;
-  font-size: 13px;
+  font-size: 1.2rem;
 }
 
 .sidebar .widget.popular-feeds .single-popular-feed .feed-desc .time i {
@@ -3440,7 +3501,7 @@ blockquote .shape {
 }
 
 .sidebar .widget.categories-widget ul li a {
-  font-size: 14px;
+  font-size: 1rem;
   padding: 15px 0;
   display: block;
   color: #888;
@@ -3465,7 +3526,7 @@ blockquote .shape {
   justify-content: center;
   padding: 7px 15px;
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
   background: #88c250;
   margin-right: 7px;
@@ -3493,7 +3554,7 @@ blockquote .shape {
   border: 1px solid #eee;
   padding: 0 20px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .sidebar .widget.appointment-widget .form .form-group textarea {
@@ -3502,7 +3563,7 @@ blockquote .shape {
   border: 1px solid #eee;
   padding: 20px;
   border-radius: 0;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .sidebar .widget.help-call .inner {
@@ -3511,14 +3572,14 @@ blockquote .shape {
 
 .sidebar .widget.help-call .inner h3 {
   color: #081828;
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: 700;
   color: #49b0c1;
   margin: 0;
 }
 
 .sidebar .widget.help-call .inner h3 span {
-  font-size: 16px;
+  font-size: 1.3rem;
   font-weight: 500;
   display: block;
   color: #081828;
@@ -3556,6 +3617,19 @@ blockquote .shape {
   opacity: 1;
 }
 
+.departments a {
+  color: #25d2e6;
+  margin-top: 10px;
+  font-size: 1.4rem;
+  width: 100%;
+  text-align: right;
+  transition: all .5
+}
+
+.departments a:hover {
+  color: #2c6ad4;
+}
+
 .departments .nav {
   margin-bottom: 70px;
   border: none;
@@ -3571,7 +3645,7 @@ blockquote .shape {
   border-radius: 0;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  font-size: 14px;
+  font-size: 1rem;
   border-right: 1px solid rgba(221, 221, 221, 0.514);
   border-bottom: 3px solid #eee !important;
 }
@@ -3614,7 +3688,7 @@ blockquote .shape {
 
 .departments .nav .nav-link i {
   display: inline-block;
-  font-size: 15px;
+  font-size: 1.3rem;
   height: 40px;
   width: 40px;
   line-height: 40px;
@@ -3635,8 +3709,16 @@ blockquote .shape {
   padding-left: 40px;
 }
 
+.departments .department-content .text .description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
 .departments .department-content .text h3 {
-  font-size: 30px;
+  font-size: 2.4rem;
   line-height: 45px;
   margin-bottom: 25px;
 }
@@ -3658,7 +3740,7 @@ blockquote .shape {
 .departments .department-content .text .list li {
   display: block;
   margin-bottom: 12px;
-  font-size: 14px;
+  font-size: 1rem;
   color: #777;
   padding-left: 30px;
   position: relative;
@@ -3666,7 +3748,7 @@ blockquote .shape {
 
 .departments .department-content .text .list li i {
   color: #88c250;
-  font-size: 18px;
+  font-size: 1.4rem;
   display: inline-block;
   position: absolute;
   left: 0;
@@ -3678,7 +3760,7 @@ blockquote .shape {
 }
 
 .departments .rating {
-  font-size: 55px;
+  font-size: 4.6rem;
 }
 
 .departments .rating .container {
@@ -3689,12 +3771,12 @@ blockquote .shape {
 
 .departments .rating .star {
   display: block;
-  font-size: 18px;
+  font-size: 1.4rem;
 }
 
 .departments .rating .star div{
   display: flex;
-  font-size: 15px;
+  font-size: 1.3rem;
 }
 
 .departments .rating .star span{
@@ -3717,7 +3799,7 @@ blockquote .shape {
 }
 
 .departments .rating h4{
-  font-size: 20px;
+  font-size: 1.6rem;
 }
 
 .appointment.page {
@@ -3728,7 +3810,7 @@ blockquote .shape {
 }
 
 .appointment.page .appointment-title h2 {
-  font-size: 30px;
+  font-size: 2.4rem;
 }
 
 .appointment.page .image {
@@ -3773,7 +3855,7 @@ blockquote .shape {
 }
 
 .appointment-form .appointment-title span {
-  font-size: 80px;
+  font-size: 6rem;
   font-weight: 700;
   text-transform: uppercase;
   position: absolute;
@@ -3787,13 +3869,13 @@ blockquote .shape {
 }
 
 .appointment-form .appointment-title h2 {
-  font-size: 35px;
+  font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
 .appointment-form .small-title {
-  font-size: 15px;
+  font-size: 1.3rem;
   font-weight: 500;
   display: block;
   margin-bottom: 15px;
@@ -3813,7 +3895,7 @@ blockquote .shape {
   padding: 0 25px;
   padding-right: 45px;
   height: 55px;
-  font-size: 14px;
+  font-size: 1rem;
   border: 1px solid #eee;
   font-weight: 400;
   color: #666;
@@ -3831,7 +3913,7 @@ blockquote .shape {
   padding: 25px;
   padding-right: 45px;
   height: 150px;
-  font-size: 14px;
+  font-size: 1rem;
   border: 1px solid #eee;
   font-weight: 400;
   color: #666;
@@ -3859,7 +3941,7 @@ blockquote .shape {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-size: 14px;
+  font-size: 1rem;
   color: #888;
   font-weight: 400;
 }
@@ -3901,7 +3983,7 @@ blockquote .shape {
 }
 
 .login .form-head .title {
-  font-size: 24px;
+  font-size: 2rem;
   line-height: 1.42;
   font-weight: 500;
   margin-bottom: 30px;
@@ -3916,7 +3998,7 @@ blockquote .shape {
   display: block;
   margin-bottom: 0.5rem;
   color: #888;
-  font-size: 15px;
+  font-size: 1.3rem;
   font-weight: 400;
 }
 
@@ -3929,7 +4011,7 @@ blockquote .shape {
   border-radius: 5px;
   outline: 0;
   background-color: #fff;
-  font-size: 15px;
+  font-size: 1.3rem;
 }
 
 .login .form-head form .check-and-pass .form-check {
@@ -3978,7 +4060,7 @@ blockquote .shape {
 
 .login .form-head form .outer-link {
   display: block;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
   color: #888;
   margin-top: 30px;
@@ -4003,7 +4085,7 @@ blockquote .shape {
 }
 
 .login .form-head .alt-option span {
-  font-size: 15px;
+  font-size: 1.3rem;
   background: #fff;
   color: #888;
   padding: 5px 15px;
@@ -4033,14 +4115,16 @@ blockquote .shape {
 }
 
 .login .form-head .socila-login ul li a {
+  display: flex;
+  align-items: center;
+  width: 100%;
   padding: 15px 14px;
   text-align: center;
   border: 1px solid #eee;
   border-radius: 5px;
-  display: block;
   color: #555;
-  font-weight: 500;
-  font-size: 12px;
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
 .login .form-head .socila-login ul li a.facebook:hover {
@@ -4059,16 +4143,17 @@ blockquote .shape {
 
 .login .form-head .socila-login ul li a.google:hover {
   color: #fff;
-  background: #dd4b39;
+  background: #6699ff;
   border-color: transparent;
 }
 
-.login .form-head .socila-login ul li a.google:hover i {
-  color: #fff;
+.login .form-head .socila-login ul li a.google img {
+  width: 30px;
+  height: 30px;
 }
 
-.login .form-head .socila-login ul li a.google i {
-  color: #dd4b39;
+.login .form-head .socila-login ul li a.google span {
+  flex-grow: 1;
 }
 
 .login .form-head .socila-login ul li a.instagram:hover {
@@ -4102,25 +4187,22 @@ blockquote .shape {
 .login .form-head .socila-login ul li a i {
   display: inline-block;
   margin-right: 10px;
-  font-size: 15px;
+  font-size: 1.3rem;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
-.services .custom-padding-right {
-  padding-right: 0 !important;
+.services a {
+  color: #25d2e6;
+  margin-top: 10px;
+  font-size: 1.4rem;
+  width: 100%;
+  text-align: right;
+  transition: all .5
 }
 
-.services .custom-padding-left {
-  padding-left: 0 !important;
-}
-
-.services .custom-border-right {
-  border-right: none !important;
-}
-
-.services .custom-border-bottom {
-  border-bottom: none !important;
+.services a:hover {
+  color: #2c6ad4;
 }
 
 .services .services-content .single-list {
@@ -4177,7 +4259,7 @@ blockquote .shape {
 
 .services .services-content .single-list i {
   color: #88c250;
-  font-size: 25px;
+  font-size: 2.1rem;
   display: inline-block;
   margin-bottom: 30px;
   height: 70px;
@@ -4219,12 +4301,13 @@ blockquote .shape {
 
 .services .services-content .single-list h4 a {
   color: #081828;
-  font-size: 19px;
+  text-align: left;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 .services .services-content .single-list p {
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .service-details .details-content {
@@ -4245,7 +4328,7 @@ blockquote .shape {
 }
 
 .service-details .content .title {
-  font-size: 28px;
+  font-size: 2.4rem;
   font-weight: 500;
   margin-bottom: 30px;
   padding-bottom: 30px;
@@ -4253,7 +4336,7 @@ blockquote .shape {
 }
 
 .service-details .content .sub-title {
-  font-size: 20px;
+  font-size: 1.6rem;
   font-weight: 500;
   margin: 25px 0;
 }
@@ -4294,7 +4377,7 @@ blockquote .shape {
   left: 0;
   top: 1px;
   color: #fff;
-  font-size: 7px;
+  font-size: .6rem;
   height: 18px;
   width: 18px;
   background: #49b0c1;
@@ -4323,7 +4406,7 @@ blockquote .shape {
 }
 
 .service-sidebar .single-widget h3 {
-  font-size: 18px;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #081828;
   margin-bottom: 30px;
@@ -4347,7 +4430,7 @@ blockquote .shape {
   height: 55px;
   border: none;
   padding: 0 70px 0 20px;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
   border: 1px solid #eee;
   border-radius: 5px;
@@ -4379,7 +4462,7 @@ blockquote .shape {
   height: 38px;
   z-index: 1;
   color: #fff !important;
-  font-size: 13px;
+  font-size: 1.2rem;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   color: #fff;
@@ -4412,13 +4495,13 @@ blockquote .shape {
   border-radius: 0;
   position: relative;
   padding-right: 40px;
-  font-size: 14px;
+  font-size: 1rem;
   border-bottom: 1px solid #eee;
 }
 
 .service-sidebar .service-category li a i {
   float: right;
-  font-size: 14px;
+  font-size: 1rem;
   position: absolute;
   top: 0;
   right: 20px;
@@ -4437,7 +4520,7 @@ blockquote .shape {
   display: block;
   margin-bottom: 25px;
   padding-left: 45px;
-  font-size: 14px;
+  font-size: 1rem;
   color: #888;
 }
 
@@ -4446,7 +4529,7 @@ blockquote .shape {
 }
 
 .service-sidebar .address ul li i {
-  font-size: 24px;
+  font-size: 2rem;
   color: #49b0c1;
   position: absolute;
   left: 0;
@@ -4454,7 +4537,7 @@ blockquote .shape {
 }
 
 .service-sidebar .address ul li a {
-  font-size: 15px;
+  font-size: 1.3rem;
   display: block;
   margin-top: 3px;
   font-weight: 500;
@@ -4463,6 +4546,19 @@ blockquote .shape {
 
 .service-sidebar .address ul li a:hover {
   color: #49b0c1;
+}
+
+.doctors a {
+  color: #25d2e6;
+  margin-top: 10px;
+  font-size: 1.4rem;
+  width: 100%;
+  text-align: right;
+  transition: all .5
+}
+
+.doctors a:hover {
+  color: #2c6ad4;
 }
 
 .doctors .section-title {
@@ -4506,7 +4602,7 @@ blockquote .shape {
 
 .doctors .single-doctor .image .social li a {
   text-align: center;
-  font-size: 15px;
+  font-size: 1.3rem;
   color: #fff;
 }
 
@@ -4528,14 +4624,15 @@ blockquote .shape {
 
 .doctors .single-doctor .content h5 {
   font-weight: 400;
-  font-size: 13px;
+  font-size: 1.2rem;
   display: block;
   color: #88c250;
   margin-bottom: -4px;
 }
 
 .doctors .single-doctor .content h3 a {
-  font-size: 16px;
+  font-size: 1.3rem;
+  text-align: center;
   font-weight: 600;
   color: #49b0c1;
 }
@@ -4566,7 +4663,7 @@ blockquote .shape {
 }
 
 .doctor-details .doctor-left-bar .single-bar h4 {
-  font-size: 18px;
+  font-size: 1.4rem;
   font-weight: 500;
   margin-bottom: 10px;
   color: #081828;
@@ -4625,13 +4722,13 @@ blockquote .shape {
 }
 
 .doctor-details .content .name {
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: 500;
 }
 
 .doctor-details .content .name span {
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1.3rem;
   color: #888;
   display: block;
   margin-top: 5px;
@@ -4692,7 +4789,7 @@ blockquote .shape {
 }
 
 .doctor-details .content h4 {
-  font-size: 18px;
+  font-size: 1.4rem;
   color: #081828;
   display: block;
   margin-bottom: 20px;
@@ -4728,6 +4825,19 @@ blockquote .shape {
   margin-bottom: 0;
 }
 
+.portfolio-section a {
+  color: #25d2e6;
+  margin-top: 10px;
+  font-size: 1.4rem;
+  width: 100%;
+  text-align: right;
+  transition: all .5
+}
+
+.portfolio-section a:hover {
+  color: #2c6ad4;
+}
+
 .portfolio-section.section {
   padding-bottom: 70px;
   background-image: url(../images/portfolio/bg1.png);
@@ -4753,7 +4863,7 @@ blockquote .shape {
 
 .portfolio-section .portfolio-btn-wrapper button {
   padding: 8px 20px;
-  font-size: 13px;
+  font-size: 1.2rem;
   font-weight: 500;
   border: none;
   color: #051441;
@@ -4782,7 +4892,7 @@ blockquote .shape {
   .portfolio-section .portfolio-btn-wrapper button {
     margin-right: 10px;
     padding: 7px 18px;
-    font-size: 16px;
+    font-size: 1.3rem;
   }
 }
 
@@ -4790,7 +4900,7 @@ blockquote .shape {
   .portfolio-section .portfolio-btn-wrapper button {
     margin-right: 10px;
     padding: 7px 18px;
-    font-size: 16px;
+    font-size: 1.3rem;
   }
 }
 
@@ -4871,7 +4981,7 @@ blockquote .shape {
   text-align: center;
   border: 1px solid #eee;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 1rem;
   position: absolute;
   bottom: 30px;
   left: 30px;
@@ -4885,7 +4995,7 @@ blockquote .shape {
 }
 
 .portfolio-section .pf-content .category {
-  font-size: 14px;
+  font-size: 1rem;
   color: #fff;
   font-weight: 400;
 }
@@ -4893,7 +5003,8 @@ blockquote .shape {
 .portfolio-section .pf-content h4 a {
   margin-top: 8px;
   color: #fff;
-  font-size: 19px;
+  text-align: left;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
@@ -4921,7 +5032,7 @@ blockquote .shape {
 }
 
 .portfolio-details .content .title {
-  font-size: 28px;
+  font-size: 2.4rem;
   font-weight: 500;
   margin-bottom: 30px;
   padding-bottom: 30px;
@@ -4929,7 +5040,7 @@ blockquote .shape {
 }
 
 .portfolio-details .content .sub-title {
-  font-size: 20px;
+  font-size: 1.6rem;
   font-weight: 500;
   margin: 25px 0;
 }
@@ -4976,7 +5087,7 @@ blockquote .shape {
   left: 0;
   top: 1px;
   color: #fff;
-  font-size: 7px;
+  font-size: .6rem;
   height: 18px;
   width: 18px;
   background: #49b0c1;
@@ -4997,7 +5108,7 @@ blockquote .shape {
 }
 
 .portfolio-sidebar .single-widget h3 {
-  font-size: 20px;
+  font-size: 1.6rem;
   font-weight: 500;
   color: #081828;
   margin-bottom: 30px;
@@ -5017,7 +5128,7 @@ blockquote .shape {
 }
 
 .portfolio-sidebar .single-widget.researcher-details .author-box h6 {
-  font-size: 16px;
+  font-size: 1.3rem;
   font-weight: 500;
   color: #081828;
   display: block;
@@ -5047,7 +5158,7 @@ blockquote .shape {
 }
 
 .portfolio-sidebar .single-widget.researcher-details .author-box .social li a {
-  font-size: 14px;
+  font-size: 1rem;
   color: #888;
 }
 
@@ -5065,7 +5176,7 @@ blockquote .shape {
   margin-bottom: 15px;
   padding-bottom: 15px;
   color: #888;
-  font-size: 14px;
+  font-size: 1rem;
   border-bottom: 1px solid #eee;
 }
 
@@ -5078,7 +5189,7 @@ blockquote .shape {
   color: #49b0c1;
   display: inline-block;
   margin-right: 8px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .portfolio-sidebar .single-widget .list-info li:last-child {
@@ -5131,7 +5242,7 @@ blockquote .shape {
   display: inline-block;
   margin-bottom: 25px;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 2.5rem;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.01);
@@ -5141,19 +5252,22 @@ blockquote .shape {
 }
 
 .how-works .single-work h3 {
-  font-size: 22px;
+  font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 10px;
   color: #fff;
 }
 
 .how-works .single-work p {
-  font-size: 14px;
+  font-size: 1rem;
   margin-top: 20px;
   color: #fff;
 }
 
 @media only screen and (min-width: 991px) and (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
   .section-title {
     margin-bottom: 50px;
     padding: 0 220px;
@@ -5203,17 +5317,17 @@ blockquote .shape {
   }
 
   .section-title h3 {
-    font-size: 55px;
+    font-size: 4.6rem;
     top: -25px;
   }
 
   .section-title h2 {
-    font-size: 28px;
+    font-size: 2.4rem;
     line-height: 38px;
   }
 
   .section-title p {
-    font-size: 15px;
+    font-size: 1.3rem;
   }
 
   .section-title.align-left {
@@ -5227,12 +5341,12 @@ blockquote .shape {
   }
 
   .breadcrumbs .page-title {
-    font-size: 28px;
+    font-size: 2.4rem;
   }
 
   .button .btn {
     padding: 12px 25px;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 500;
   }
 
@@ -5300,7 +5414,7 @@ blockquote .shape {
   }
 
   .hero-area .hero-text h2 {
-    font-size: 30px;
+    font-size: 2.4rem;
     line-height: 45px;
     margin-bottom: 22px;
   }
@@ -5320,7 +5434,7 @@ blockquote .shape {
   }
 
   .hero-area.style2 .single-slider .hero-text h2 {
-    font-size: 27px;
+    font-size: 2.3rem;
   }
 
   .appointment-form {
@@ -5329,7 +5443,7 @@ blockquote .shape {
   }
 
   .appointment-form .appointment-title span {
-    font-size: 70px;
+    font-size: 5.8rem;
     top: -30px;
   }
 
@@ -5343,7 +5457,7 @@ blockquote .shape {
   }
 
   .about-us .content-right h2 {
-    font-size: 28px;
+    font-size: 2.4rem;
     line-height: 42px;
   }
 
@@ -5375,7 +5489,7 @@ blockquote .shape {
   }
 
   .departments .department-content .text h3 {
-    font-size: 28px;
+    font-size: 2.4rem;
     margin-bottom: 20px;
   }
 
@@ -5397,7 +5511,7 @@ blockquote .shape {
   }
 
   .appointment.page .appointment-title h2 {
-    font-size: 28px;
+    font-size: 2.4rem;
   }
 
   .latest-news-area .single-news .image a {
@@ -5440,7 +5554,7 @@ blockquote .shape {
   .portfolio-section.section .portfolio-btn-wrapper button {
     margin-right: 10px;
     padding: 7px 18px;
-    font-size: 14px;
+    font-size: 1rem;
   }
 
   .portfolio-section.section .grid {
@@ -5457,12 +5571,12 @@ blockquote .shape {
 
   .testimonials .section-title h3 {
     opacity: 0.1;
-    font-size: 50px;
+    font-size: 4.2rem;
   }
 
   .testimonials.style2 .section-title h3 {
     opacity: 0.4;
-    font-size: 50px;
+    font-size: 4.2rem;
   }
 
   .testimonials .tns-nav {
@@ -5481,11 +5595,11 @@ blockquote .shape {
     height: 70px;
     width: 70px;
     line-height: 72px;
-    font-size: 28px;
+    font-size: 2.4rem;
   }
 
   .how-works .single-work h3 {
-    font-size: 18px;
+    font-size: 1.4rem;
   }
 
   .sidebar.blog-grid-page {
@@ -5543,18 +5657,18 @@ blockquote .shape {
   }
 
   .section-title h3 {
-    font-size: 30px;
+    font-size: 2.4rem;
     top: -20px;
   }
 
   .section-title h2 {
-    font-size: 22px;
+    font-size: 1.8rem;
     margin-top: 3px;
     line-height: 35px;
   }
 
   .section-title p {
-    font-size: 14px;
+    font-size: 1rem;
   }
 
   .section-title.align-left {
@@ -5572,7 +5686,7 @@ blockquote .shape {
   }
 
   .breadcrumbs .page-title {
-    font-size: 22px;
+    font-size: 1.8rem;
     line-height: 30px !important;
   }
 
@@ -5584,7 +5698,7 @@ blockquote .shape {
 
   .button .btn {
     padding: 12px 25px;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 500;
   }
 
@@ -5668,7 +5782,7 @@ blockquote .shape {
   }
 
   .breadcrumbs .breadcrumbs-content .page-title {
-    font-size: 25px;
+    font-size: 2.1rem;
   }
 
   .header {
@@ -5724,13 +5838,13 @@ blockquote .shape {
   }
 
   .hero-area .hero-text h2 {
-    font-size: 24px;
+    font-size: 2rem;
     line-height: 35px;
     margin-bottom: 22px;
   }
 
   .hero-area .hero-text p {
-    font-size: 14px;
+    font-size: 1rem;
   }
 
   .hero-area .hero-text .button {
@@ -5769,13 +5883,13 @@ blockquote .shape {
   }
 
   .appointment-form .appointment-title h2 {
-    font-size: 22px;
+    font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 20px;
   }
 
   .appointment-form .appointment-title span {
-    font-size: 30px;
+    font-size: 2.4rem;
     top: -20px;
   }
 
@@ -5797,11 +5911,11 @@ blockquote .shape {
   }
 
   .appointment.page .appointment-title h2 {
-    font-size: 24px;
+    font-size: 2rem;
   }
 
   .about-us .content-right h2 {
-    font-size: 22px;
+    font-size: 1.8rem;
     line-height: 35px;
   }
 
@@ -5827,7 +5941,7 @@ blockquote .shape {
     width: 100%;
     border: 1px solid #eee !important;
     padding: 12px 20px;
-    font-size: 13px !important;
+    font-size: 1.1rem !important;
   }
 
   .departments .nav .nav-item button.active {
@@ -5835,7 +5949,7 @@ blockquote .shape {
   }
 
   .departments .nav .nav-item button i {
-    font-size: 14px;
+    font-size: 1rem;
     height: 35px;
     width: 35px;
     line-height: 35px;
@@ -5851,7 +5965,7 @@ blockquote .shape {
   }
 
   .departments .department-content .text h3 {
-    font-size: 22px;
+    font-size: 1.8rem;
     margin-bottom: 10px;
   }
 
@@ -5902,7 +6016,7 @@ blockquote .shape {
   }
 
   .service-details .content .title {
-    font-size: 24px;
+    font-size: 2rem;
     margin-bottom: 20px;
     padding-bottom: 20px;
   }
@@ -5917,12 +6031,12 @@ blockquote .shape {
   }
 
   .doctor-details .content .name {
-    font-size: 20px;
+    font-size: 1.6rem;
   }
 
   .doctor-details .content .name span {
     margin-top: 15px;
-    font-size: 14px;
+    font-size: 1rem;
   }
 
   .portfolio-section.section {
@@ -5932,7 +6046,7 @@ blockquote .shape {
   .portfolio-section.section .portfolio-btn-wrapper button {
     margin-right: 10px;
     padding: 7px 18px;
-    font-size: 13px;
+    font-size: 1.2rem;
   }
 
   .portfolio-section.section .grid {
@@ -5949,12 +6063,12 @@ blockquote .shape {
 
   .testimonials .section-title h3 {
     opacity: 0.1;
-    font-size: 30px;
+    font-size: 2.4rem;
   }
 
   .testimonials.style2 .section-title h3 {
     opacity: 0.4;
-    font-size: 30px;
+    font-size: 2.4rem;
   }
 
   .testimonials .tns-nav {
@@ -5973,15 +6087,15 @@ blockquote .shape {
     height: 70px;
     width: 70px;
     line-height: 72px;
-    font-size: 28px;
+    font-size: 2.4rem;
   }
 
   .how-works .single-work h3 {
-    font-size: 18px;
+    font-size: 1.4rem;
   }
 
   .login .form-head .title {
-    font-size: 22px !important;
+    font-size: 1.8rem !important;
   }
 
   .login .form-head .socila-login ul {
@@ -5989,7 +6103,7 @@ blockquote .shape {
   }
 
   .accordion-item .accordion-button .title {
-    font-size: 14px;
+    font-size: 1rem;
   }
 
   .latest-news-area .single-news .image {
@@ -6114,7 +6228,7 @@ blockquote .shape {
   }
 
   .post-details .post-title a {
-    font-size: 18px !important;
+    font-size: 1.4rem !important;
     font-weight: 600;
   }
 
@@ -6132,20 +6246,20 @@ blockquote .shape {
   }
 
   .error-area .error-content h1 {
-    font-size: 60px !important;
+    font-size: 5rem !important;
     line-height: 80px !important;
   }
 
   .error-area .error-content h2 {
-    font-size: 18px !important;
+    font-size: 1.4rem !important;
   }
 
   .maill-success .success-content h1 {
-    font-size: 28px !important;
+    font-size: 2.3rem !important;
   }
 
   .maill-success .success-content h2 {
-    font-size: 18px !important;
+    font-size: 1.4rem !important;
   }
 
   .login .form-head {
@@ -6153,7 +6267,7 @@ blockquote .shape {
   }
 
   .login .form-head .title {
-    font-size: 25px;
+    font-size: 2.1rem;
   }
 
   .login .form-head .alt-option {
@@ -6177,7 +6291,7 @@ blockquote .shape {
   }
 
   .contact-us .contant-inner-title h2 {
-    font-size: 22px;
+    font-size: 1.8rem;
   }
 
   .contact-us .single-head {
@@ -6198,7 +6312,7 @@ blockquote .shape {
   }
 
   .contact-us .form-main .form-title h2 {
-    font-size: 25px;
+    font-size: 2.1rem;
   }
 
   .faq {
@@ -6236,7 +6350,7 @@ blockquote .shape {
   }
 
   .post-details .post-title a {
-    font-size: 22px;
+    font-size: 1.8rem;
     font-weight: 600;
   }
 
@@ -6246,7 +6360,7 @@ blockquote .shape {
   }
 
   blockquote .icon i {
-    font-size: 30px;
+    font-size: 2.4rem;
   }
 
   .post-social-media .share-title {
@@ -6279,12 +6393,12 @@ blockquote .shape {
   }
 
   .footer .footer-top .cta h3 {
-    font-size: 18px !important;
+    font-size: 1.4rem !important;
     margin-bottom: 15px !important;
   }
 
   .footer .footer-top .cta p {
-    font-size: 14px !important;
+    font-size: 1.2rem !important;
   }
 
   .footer .footer-top .form {
@@ -6307,7 +6421,7 @@ blockquote .shape {
   }
 
   .footer .footer-top .form h3 {
-    font-size: 18px !important;
+    font-size: 1.4rem !important;
     margin-bottom: 15px !important;
   }
 
@@ -6344,6 +6458,12 @@ blockquote .shape {
   }
 }
 
+@media only screen and (min-width: 2100px){
+  html {
+    font-size: 22px;
+  }
+}
+
 .contact-us {
   position: relative;
   background-color: #fff;
@@ -6355,7 +6475,7 @@ blockquote .shape {
 }
 
 .contact-us .main-title {
-  font-size: 19px;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 35px;
   color: #081828;
@@ -6389,7 +6509,7 @@ blockquote .shape {
   text-align: center;
   display: block;
   color: #49b0c1;
-  font-size: 20px;
+  font-size: 1.6rem;
   background-color: #fff;
   border: 1px solid #eee;
   border-radius: 5px;
@@ -6411,7 +6531,7 @@ blockquote .shape {
 }
 
 .contact-us .single-info h3 {
-  font-size: 16px;
+  font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 15px;
 }
@@ -6424,7 +6544,7 @@ blockquote .shape {
   font-weight: 400;
   display: block;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 1rem;
   color: #888;
 }
 
@@ -6436,7 +6556,7 @@ blockquote .shape {
   font-weight: 400;
   color: #7e8890;
   display: inline-block;
-  font-size: 15px;
+  font-size: 1.3rem;
 }
 
 .contact-us .single-info ul li a:hover {
@@ -6451,7 +6571,7 @@ blockquote .shape {
 .contact-us .contact-social h5 {
   color: #081828;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.4rem;
 }
 
 .contact-us .contact-social ul li {
@@ -6464,7 +6584,7 @@ blockquote .shape {
 }
 
 .contact-us .contact-social ul li a {
-  font-size: 14px;
+  font-size: 1rem;
   color: #888;
 }
 
@@ -6488,11 +6608,11 @@ blockquote .shape {
 
 .contact-us .form-main .form-title h2 {
   margin-bottom: 35px;
-  font-size: 22px;
+  font-size: 1.8rem;
 }
 
 .contact-us .form-main .form-title p {
-  font-size: 16px;
+  font-size: 1.3rem;
 }
 
 .contact-us .form .form-group {
@@ -6572,7 +6692,7 @@ blockquote .shape {
 }
 
 .error-area .error-content h1 {
-  font-size: 100px;
+  font-size: 9rem;
   color: #fff;
   margin-bottom: 25px;
   font-weight: 800;
@@ -6580,7 +6700,7 @@ blockquote .shape {
 }
 
 .error-area .error-content h2 {
-  font-size: 25px;
+  font-size: 2.1rem;
   margin-bottom: 10px;
   color: #fff;
 }
@@ -6625,20 +6745,20 @@ blockquote .shape {
 }
 
 .maill-success .success-content i {
-  font-size: 40px;
+  font-size: 3.2rem;
   margin-bottom: 20px;
   color: #49b0c1;
 }
 
 .maill-success .success-content h1 {
-  font-size: 40px;
+  font-size: 3.2rem;
   color: #49b0c1;
   margin-bottom: 10px;
   font-weight: 700;
 }
 
 .maill-success .success-content h2 {
-  font-size: 18px;
+  font-size: 1.4rem;
   margin-bottom: 15px;
   color: #081828;
 }
@@ -6672,7 +6792,7 @@ blockquote .shape {
   color: #fff;
   text-transform: uppercase;
   white-space: nowrap;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 500;
   padding-top: 17px;
   padding-bottom: 15px;
@@ -6704,14 +6824,14 @@ blockquote .shape {
   margin-bottom: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
 .doctor-calendar-table table tbody tr td span {
   display: block;
   color: #7d7d7d;
-  font-size: 14.5px;
+  font-size: 1.15rem;
   margin-top: 5px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -6727,7 +6847,7 @@ blockquote .shape {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1rem;
   background-color: transparent;
 }
 
@@ -6777,19 +6897,19 @@ blockquote .shape {
 
 .footer .footer-top .cta h3 {
   color: #fff;
-  font-size: 20px;
+  font-size: 1.6rem;
   display: block;
   margin-bottom: 22px;
   font-weight: 600;
 }
 
 .footer .footer-top .cta p {
-  font-size: 15px;
+  font-size: 1.3rem;
   color: #fff;
 }
 
 .footer .footer-top .cta p a {
-  color: #88c250;
+  color: #afe67a;
   text-decoration: underline;
 }
 
@@ -6803,7 +6923,7 @@ blockquote .shape {
 
 .footer .footer-top .form h3 {
   color: #fff;
-  font-size: 20px;
+  font-size: 1.6rem;
   display: block;
   margin-bottom: 22px;
   font-weight: 600;
@@ -6829,7 +6949,7 @@ blockquote .shape {
   color: #fff;
   padding: 0 150px 0 20px;
   color: #fff !important;
-  font-size: 14px;
+  font-size: 1rem;
   background-color: #fff3;
   border-radius: 5px 0 0 5px;
 }
@@ -6911,7 +7031,7 @@ blockquote .shape {
 .footer .single-footer.f-about p {
   color: #fff;
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .footer .single-footer.f-about .social {
@@ -6935,7 +7055,7 @@ blockquote .shape {
   display: block;
   color: #49b0c1;
   background-color: #fff;
-  font-size: 13px;
+  font-size: 1.2rem;
 }
 
 .footer .single-footer.f-about .social li a:hover {
@@ -6952,7 +7072,7 @@ blockquote .shape {
 }
 
 .footer .single-footer.f-link li a {
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
   color: #fff;
 }
@@ -6997,7 +7117,7 @@ blockquote .shape {
   position: absolute;
   left: 0;
   top: 5px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .footer .single-footer.f-contact ul li:last-child {
@@ -7005,7 +7125,7 @@ blockquote .shape {
 }
 
 .footer .single-footer h3 {
-  font-size: 18px;
+  font-size: 1.4rem;
   font-weight: 600;
   display: block;
   margin-bottom: 35px;
@@ -7025,7 +7145,7 @@ blockquote .shape {
 
 .footer .footer-bottom .copyright-text {
   color: #fff;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .footer .footer-bottom .copyright-text a {

@@ -6,8 +6,12 @@
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="cta">
                         <h3>Need Help?</h3>
-                        <p>Please feel free to contact our friendly reception staff with any medical enquiry, or
-                            call <a href="tel:123-456-789">123-456-789</a></p>
+                        @foreach($global as $desc)
+                          @if($desc -> name === 'telp')
+                            <p>Please feel free to contact our friendly reception staff with any medical enquiry, or
+                                call <a href="tel:{{$desc -> description}}">{{$desc -> description}}</a></p>
+                          @endif
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
@@ -41,11 +45,9 @@
                         </div>
                         <p>There’s nothing in this story to make us think he was dreaming about riches.</p>
                         <ul class="social">
-                            <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="lni lni-youtube"></i></a></li>
+                            @foreach($social_global as $desc)
+                              <li><a href="{{$desc -> description}}"><i class="lni lni-{{$desc -> name}}"></i></a></li>
+                            @endforeach
                         </ul>
                     </div>
 
@@ -57,20 +59,19 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12">
                                 <ul>
-                                    <li><a href="about-us.html">About</a></li>
-                                    <li><a href="doctors.html">Team</a></li>
-                                    <li><a href="services.html">services</a></li>
-                                    <li><a href="pricing.html">Cost Calculator</a></li>
-                                    <li><a href="time-table.html">Working Hours</a></li>
+                                    <li><a href="/tentang-kami">About</a></li>
+                                    <li><a href="/dokter-kami">Team</a></li>
+                                    <li><a href="/departemen-kami">department</a></li>
+                                    <li><a href="#">Cost Calculator</a></li>
+                                    <li><a href="/Tabel-jam-kerja">Working Hours</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">
                                 <ul>
-                                     <li><a href="appointment.html">Appointment</a></li>
-                                    <li><a href="blog-single-sidebar.html">Gallery</a></li>
-                                    <li><a href="time-table.html">Timetable</a></li>
-                                    <li><a href="portfolio-details.html">Details</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="/buat-janji-temu">Appointment</a></li>
+                                    <li><a href="/blog-kami">Blogs</a></li>
+                                    <li><a href="/pelayanan-kami">services</a></li>
+                                    <li><a href="/kontak">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -107,15 +108,15 @@
                     <div class="single-footer last f-contact">
                         <h3>Contact</h3>
                         <ul>
-                            <li>
-                                <i class="lni lni-map-marker"></i>  3909 Witmer Rd, Niagara Falls, NY 14305, United States
-                            </li>
-                            <li>
-                                <i class="lni lni-phone"></i><a class="color" href="tel:123-456-789">Tel:123-456-789</a>
-                            </li>
-                            <li>
-                                <i class="lni lni-envelope"></i> Mail. <a href="mailto:medicapps@gmail.com">medicapps@gmail.com</a>
-                            </li>
+                            @foreach($global as $desc)
+                              @if($desc -> name === 'location')
+                                <li><i class="lni lni-map-marker"></i>{{$desc -> description}}</li>
+                              @elseif($desc -> name === 'telp')
+                                <li><i class="lni lni-phone"></i> <a class="color" href="tel:{{$desc -> description}}">{{$desc -> description}}</a></li>
+                              @else
+                                <li><i class="lni lni-envelope"></i><a href="mailto:{{$desc -> description}}">{{$desc -> description}}</a></li>
+                              @endif
+                            @endforeach
                         </ul>
                     </div>
 
@@ -131,11 +132,10 @@
                 <div class="row">
                     <div class="col">
                         <div class="content align-center">
-                            <p class="copyright-text">Designed and Developed by <a href="https://themeforest.net/user/avs_technolabs" rel="nofollow" target="_blank">AVS Technolabs</a>
+                            <p class="copyright-text">Designed and Developed by AFSD Team</a>
                             </p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

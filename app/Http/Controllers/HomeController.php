@@ -11,30 +11,15 @@ use DateTime;
 
 class HomeController extends Controller
 {
-  public function init()
-  {
-    // global_attribute::Create([
-    // 'name' => 'email',
-    // 'description' => 'rijal.amar29@gmail.com'
-    // ]);
-    // global_attribute::Create([
-    // 'name' => 'telp',
-    // 'description' => '089-8868-4379'
-    // ]);
-    // global_attribute::Create([
-    // 'name' => 'instagram',
-    // 'description' => 'https://www.instagram.com/rspkumuhammadiyahsragen/'
-    // ]);
-    // global_attribute::Create([
-    //   'name' => 'facebook',
-    //   'description' => 'https://m.facebook.com/pkumuhsragen/'
-    // ]);
-  }
+  private static $global=null;
+  private static $social_global=null;
+
   public function home()
   {
-    // HomeController::init();
-    $global = global_attribute::select('name','description') -> whereIn('name',['email','telp']) -> get();
-    $social = global_attribute::select('name','description') -> whereIn('name',[...DataList::social]) -> get();
+    if(!self::$global && !self::$social_global){
+      self::$global = global_attribute::select('name','description') -> whereIn('name',['email','telp','location']) -> get();
+      self::$social_global = global_attribute::select('name','description') -> whereIn('name',[...DataList::social]) -> get();
+    }
     $carousel_main = carousel_home::select('title','description','image') -> take(5) -> get();
     $about_image = media::select('name','media') -> whereIn('name',['about_img','about_media']) -> get();
     $about_us = about_us::select('title','description') -> get() -> map(function ($data)
@@ -42,7 +27,7 @@ class HomeController extends Controller
       $data -> description = AutoModifableText::getText($data -> description);
       return $data;
     });
-    $department = department::all() -> map(function ($data)
+    $department = department::all() -> take(10) -> map(function ($data)
     {
       $data -> description = AutoModifableText::getText($data -> description);
       $data -> icon = DataList::department_icon[$data -> icon];
@@ -70,11 +55,11 @@ class HomeController extends Controller
           return $item -> title;
         }
       )[0];
-      $social = DB::select('select a.social as social,a.link as link from social as a '.
+      $social_doc = DB::select('select a.social as social,a.link as link from social as a '.
       'inner join doctor_social as b on a.id = b.social where b.doctor = ?',[$data -> id]);
-      return [$data,$social];
+      return [$data,$social_doc];
     });
-    $vblog = DB::select('select a.id as id,a.title as title,a.description as description,a.dates_upload as date,a.views as views,b.username as doc_username,b.image as doc_image from blog as a'.
+    $vblog = DB::select('select a.id as id,a.title as title,a.description as description,a.dates_upload as date,a.views as views,b.id as doc_id,b.username as doc_username,b.image as doc_image from blog as a'.
       ' inner join doctor as b on a.doctor = b.id order by a.views desc limit 1');
     $vblogId = null;
     $viewsblog = collect($vblog) -> map(function ($data) use(&$vblogId)
@@ -90,8 +75,8 @@ class HomeController extends Controller
       });
     $latestblog = null;
     if($vblogId != null){
-      $lblog = DB::select('select a.id as id,a.title as title,a.description as description,a.dates_upload as date,a.views as views,b.username as doc_username,b.image as doc_image from blog as a'.
-      ' inner join doctor as b on a.doctor = b.id where a.id != ? order by a.dates_upload desc limit 5',[$vblogId]);
+      $lblog = DB::select('select a.id as id,a.title as title,a.description as description,a.dates_upload as date,a.views as views,b.id as doc_id,b.username as doc_username,b.image as doc_image from blog as a'.
+      ' inner join doctor as b on a.doctor = b.id where a.id != ? order by a.dates_upload desc limit 6',[$vblogId]);
     $latestblog = collect($lblog) -> map(function ($data,$i) use(&$viewsblog)
       {
         $matches = [];
@@ -106,7 +91,7 @@ class HomeController extends Controller
         }
         return [$data, $image];
       });}
-    return view('User/Component/home',['global' => $global,'social' => $social, 'carousel_main' => $carousel_main,
+    return view('User/Component/home',['global' => self::$global,'social_global' => self::$social_global, 'carousel_main' => $carousel_main,
       'aboutUs' => [$about_us, $about_image],'department' => $department, 'service' => $service,
       'achivement' => ['total_rooms' => (int)$achivement[0] -> description,'year_exp' => (int)$achivement[1] -> description,
       'doc_count'=>$doc_count,'patient_count'=>$pat_count],'projects' => [$init_projects,$projects],'testimony'=>
@@ -114,10 +99,18 @@ class HomeController extends Controller
   }
   public function login()
   {
-    return view('User/Component/login',[]);
+    if(!self::$global && !self::$social_global){
+      self::$global = global_attribute::select('name','description') -> whereIn('name',['email','telp','location']) -> get();
+      self::$social_global = global_attribute::select('name','description') -> whereIn('name',[...DataList::social]) -> get();
+    }
+    return view('User/Component/login',['global' => self::$global,'social_global' => self::$social_global]);
   }
   public function signIn()
   {
-    return view('User/Component/signIn',[]);
+    if(!self::$global && !self::$social_global){
+      self::$global = global_attribute::select('name','description') -> whereIn('name',['email','telp','location']) -> get();
+      self::$social_global = global_attribute::select('name','description') -> whereIn('name',[...DataList::social]) -> get();
+    }
+    return view('User/Component/signIn',['global' => self::$global,'social_global' => self::$social_global]);
   }
 }

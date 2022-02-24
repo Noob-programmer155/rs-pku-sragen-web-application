@@ -21,11 +21,10 @@
         <link rel="stylesheet" href="{{asset('css/animate.css')}}" />
         <!-- Tiny-slider css -->
         <link rel="stylesheet" href="{{asset('css/tiny-slider.css')}}" />
+        <!--Glightbox  -->
+        <link rel="stylesheet" href="{{asset('css/glightbox.min.css')}}" />
         <!-- Main css -->
         <link rel="stylesheet" href="{{asset('css/main.css')}}" />
-        <!-- Detail css -->
-        <link rel="stylesheet" href="{{asset('css/detail.css')}}" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     </head>
     <body>
         <div class="preloader">
@@ -37,49 +36,6 @@
             </div>
         </div>
         <header class="header navbar-area style2">
-            <div class="top-bar">
-                <div class="container">
-                    <div class="inner-topbar">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="top-contact">
-                                    <ul>
-                                        @foreach($global as $desc)
-                                          @if($desc -> name === 'email')
-                                            <li><i class="lni lni-envelope"></i><a href="mailto:{{$desc -> description}}">{{$desc -> description}}</a></li>
-                                          @elseif($desc -> name === 'telp')
-                                            <li><i class="lni lni-phone"></i> <a class="color" href="tel:{{$desc -> description}}">{{$desc -> description}}</a> </li>
-                                          @endif
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="right-content">
-                                    <div class="login-button">
-                                        <ul>
-                                            <li>
-                                                <a href="/login"><i class="lni lni-enter"></i> Login</a>
-                                            </li>
-                                            <li>
-                                                <a href="/signup"><i class="lni lni-user"></i> Register</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="top-social">
-                                        <ul>
-                                            @foreach($social_global as $desc)
-                                              <li><a href="{{$desc -> description}}"><i class="lni lni-{{$desc -> name}}"></i></a></li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-12">

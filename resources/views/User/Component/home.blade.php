@@ -12,8 +12,8 @@
                                     <h2 class="wow fadeInLeft" data-wow-delay=".3s">{{$carousel -> title}}</h2>
                                     <p class="wow fadeInLeft" data-wow-delay=".5s">{{$carousel -> description}}</p>
                                     <div class="button wow fadeInLeft" data-wow-delay=".7s">
-                                        <a href="/make-appointment" class="btn">Book Appointment</a>
-                                        <a href="/about-us" class="btn alt">About Us</a>
+                                        <a href="/buat-janji-temu" class="btn">Book Appointment</a>
+                                        <a href="/tentang-kami" class="btn alt">About Us</a>
                                     </div>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-12 custom-padding">
                     <div class="appointment-btn button">
-                        <a class="btn" href="/make-appointment">Get Appointment</a>
+                        <a class="btn" href="/buat-janji-temu">Get Appointment</a>
                     </div>
                 </div>
             </div>
@@ -62,17 +62,11 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12 col-12">
                 <div class="content-left wow fadeInLeft" data-wow-delay=".3s">
-                    @foreach($aboutUs[1] as $mediaItem)
-                      @if($mediaItem -> name === 'about_img')
-                        <img src="/images/about/{{$mediaItem -> media}}" alt="{{$mediaItem -> name}}">
-                      @else
-                        <a id='vid_about_us_home' href="/images/video/{{$mediaItem -> media}}" class="glightbox video"><i class="lni lni-play"></i></a>
-                      @endif
-                    @endforeach
+                  <img src="/images/about/{{$aboutUs[1][0] -> media}}" alt="{{$aboutUs[1][0] -> name}}">
+                  <a href="/images/video/{{$aboutUs[1][1] -> media}}" class="glightbox2 video"><i class="lni lni-play"></i></a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-12">
-
                 <div class="content-right wow fadeInRight" data-wow-delay=".5s">
                     @foreach($aboutUs[0] as $ab => $about)
                       <span class="sub-heading">About</span>
@@ -81,7 +75,7 @@
                       <!-- view raw description  -->
                       <!-- {{$about['description']}} -->
                       <div class="button">
-                          <a href="/about-us" class="btn">More About Us</a>
+                          <a href="/tentang-kami" class="btn">More About Us</a>
                       </div>
                     @endforeach
                 </div>
@@ -127,7 +121,7 @@
                                     <div class="col-lg-6 col-md-12 col-12">
                                         <div class="text">
                                             <h3>{{$department[$i][0] -> name}}</h3>
-                                            {!! $department[$i][0] -> description !!}
+                                            <div class="description">{!! $department[$i][0] -> description !!}</div>
                                             <div class="d-md-flex d-lg-flex d-block align-items-center mt-15">
                                                 <div class="rating">
                                                     <h4>Department Rating</h4>
@@ -155,7 +149,8 @@
                                                 </div>
                                                 <div style="flex-grow:1;"></div>
                                                 <div class="button">
-                                                    <a href="/department/{{$department[$i][0] -> id}}" class="btn">View Speciality</a>
+                                                    <a href="/departemen/{{$department[$i][0] -> name}}?iddep={{$department[$i][0] -> id}}"
+                                                      class="btn" style="text-align:center;">View Speciality</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -166,6 +161,9 @@
                     @endfor
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <a href="/departemen-kami"> >>> View More</a>
         </div>
     </div>
 </section>
@@ -193,7 +191,7 @@
                                   <img class="shape1" src="/images/service/shape1.svg" alt="#">
                                   <img class="shape2" src="/images/service/shape2.svg" alt="#">
                                   <i class="lni {{$serv -> icon}}"></i>
-                                  <h4><a href="/service/{{$serv -> id}}">{{$serv -> name}}</a></h4>
+                                  <h4><a href="/pelayanan/{{$serv -> name}}?idserv={{$serv -> id}}">{{$serv -> name}}</a></h4>
                                   <p>{{$serv -> description_title}}</p>
                               </div>
                           </div>
@@ -201,6 +199,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <a href="/pelayanan-kami"> >>> View More</a>
         </div>
     </div>
 </section>
@@ -271,14 +272,17 @@
                         </div>
                         <div class="portfolio-overlay">
                             <div class="pf-content">
-                                <a href="/projects/{}" class="detail-btn"><i class="lni lni-link"></i></a>
+                                <a href="/proyek/{{$proj -> name}}?idproj={{$proj -> id}}" class="detail-btn"><i class="lni lni-link"></i></a>
                                 <span class="category">{{$proj -> name}}</span>
-                                <h4><a href="/projects/{}">{{$proj -> title}}</a></h4>
+                                <h4><a href="/proyek/{{$proj -> name}}?idproj={{$proj -> id}}">{{$proj -> title}}</a></h4>
                             </div>
                         </div>
                     </div>
                 </div>
             @endforeach
+        </div>
+        <div>
+            <a href="/proyek-kami"> >>> View More</a>
         </div>
     </div>
 </section>
@@ -346,11 +350,14 @@
                         </div>
                         <div class="content">
                             <h5>{{$doctor[0] -> profession}}</h5>
-                            <h3><a href="/doctors/{}">{{$doctor[0] -> username}}</a></h3>
+                            <h3><a href="/dokter/{{$doctor[0] -> username}}?iddoc={{$doctor[0] -> id}}">{{$doctor[0] -> username}}</a></h3>
                         </div>
                     </div>
                 </div>
             @endforeach
+        </div>
+        <div class="row">
+            <a href="/dokter-kami"> >>> View More</a>
         </div>
     </div>
 </section>
@@ -398,7 +405,7 @@
     </div>
 </section>
 
-<div class="latest-news-area section">
+<section class="latest-news-area section">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -417,18 +424,18 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="image">
-                                    <a href="/blog/{}"><img src="/images/blog/{{$blog[1][0] -> media}}"
+                                    <a href="/blog/{{$blog[0] -> title}}?idbl={{$blog[0] -> id}}"><img src="/images/blog/{{$blog[1][0] -> media}}"
                                             alt="{{$blog[0] -> title}}"></a>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="content">
-                                    <h2 class="title"><a href="/blog/{}">{{$blog[0] -> title}}</a></h2>
+                                    <h2 class="title"><a href="/blog/{{$blog[0] -> title}}?idbl={{$blog[0] -> id}}">{{$blog[0] -> title}}</a></h2>
                                     <div class="description">{!! $blog[0] -> description !!}</div>
                                     <ul class="meta-info">
                                         <li>
-                                            <a href="/doctors/{}">
-                                              <img src="/images/doctors/{{$blog[0] -> doc_image}}" alt="#">
+                                            <a href="/dokter/{{$blog[0] -> doc_username}}?iddoc={{$blog[0] -> doc_id}}">
+                                              <img src="/images/doctors/{{$blog[0] -> doc_image}}" alt="{{$blog[0] -> doc_username}}">
                                               {{$blog[0] -> doc_username}}</a>
                                         </li>
                                         <li>
@@ -445,24 +452,24 @@
                     </div>
                 @endforeach
             </div>
-            <div class="col-lg-6 col-md-12 col-12">
+            <div class="subcontainer col-lg-6 col-md-12 col-12">
                 @foreach($blogs[1] as $blog)
                     @if($blog !== null)
                         <div class="single-news wow fadeInUp" data-wow-delay=".2s">
                           <div class="row">
-                              <div class="col-lg-5 col-md-5 col-12 pr-0">
+                              <div class="col-lg-5 col-md-5 col-12 pr-0" style="display:flex;">
                                   <div class="image">
-                                      <a href="/blog/{}"><img src="/images/blog/{{$blog[1][0] -> media}}"
+                                      <a href="/blog/{{$blog[0] -> title}}?idbl={{$blog[0] -> id}}"><img src="/images/blog/{{$blog[1][0] -> media}}"
                                               alt="{{$blog[0] -> title}}"></a>
                                   </div>
                               </div>
-                              <div class="col-lg-7 col-md-7 col-12 pl-0">
+                              <div class="col-lg-7 col-md-7 col-12 pl-0" style="display:flex;">
                                   <div class="content">
-                                      <h2 class="title"><a href="/blog/{}">{{$blog[0] -> title}}</a></h2>
+                                      <h2 class="title"><a href="/blog/{{$blog[0] -> title}}?idbl={{$blog[0] -> id}}">{{$blog[0] -> title}}</a></h2>
                                       <div class="description">{!! $blog[0] -> description !!}</div>
                                       <ul class="meta-info">
                                           <li>
-                                              <a href="/doctors/{}">
+                                              <a href="/dokter/{{$blog[0] -> doc_username}}?iddoc={{$blog[0] -> doc_id}}">
                                                 <img src="/images/doctors/{{$blog[0] -> doc_image}}" alt="#">
                                                 {{$blog[0] -> doc_username}}</a>
                                           </li>
@@ -482,8 +489,11 @@
                 @endforeach
             </div>
         </div>
+        <div class="row">
+            <a href="/blog-kami"> >>> View More</a>
+        </div>
     </div>
-</div>
+</section>
 
 @include('User.Component.Utils.footerHome')
 
@@ -493,8 +503,7 @@
 <script src="{{asset('js/wow.min.js')}}"></script>
 <!--Tiny js -->
 <script src="{{asset('js/tiny-slider.js')}}"></script>
-<!-- Glightbox js -->
-<script src="{{asset('js/glightbox.min.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 <!-- Count js -->
 <script src="{{asset('js/count-up.min.js')}}"></script>
 <!-- Imagesloaded js -->
@@ -504,7 +513,7 @@
 <!-- Main js -->
 <script src="{{asset('js/main.js')}}"></script>
 
-<script>
+<script type="text/javascript">
     //======== Hero Slider
     var slider = new tns({
         container: '.hero-slider',
@@ -530,7 +539,6 @@
             0: {
                 items: 1,
             }
-
         }
     });
     //========= testimonial
@@ -564,18 +572,17 @@
             }
         }
     });
-    //========= glightbox
-    @foreach($aboutUs[1] as $mediaItem)
-      @if($mediaItem -> name === 'about_media')
-        GLightbox({
-            'href': '/images/video/{{$mediaItem -> media}}',
-            'type': 'video',
-            'source': 'youtube', //vimeo, youtube or local
-            'width': 900,
-            'autoplayVideos': true,
-        });
-      @endif
-    @endforeach
+    document.addEventListener('DOMContentLoaded',function (event) {
+      const gligh = GLightbox({selector: '.glightbox2'});
+      @foreach($aboutUs[1] as $mediaItem)
+        @if($mediaItem -> name === 'about_media')
+          gligh.insertSlide(
+            {href: '/images/video/{{$mediaItem -> media}}',type: 'video'}
+          );
+          gligh.reload();
+        @endif
+      @endforeach
+    });
 </script>
 
 @include('User.Component.Utils.footer')
