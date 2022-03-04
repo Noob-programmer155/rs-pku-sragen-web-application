@@ -21,11 +21,12 @@
         <link rel="stylesheet" href="{{asset('css/animate.css')}}" />
         <!-- Tiny-slider css -->
         <link rel="stylesheet" href="{{asset('css/tiny-slider.css')}}" />
+        <link rel="stylesheet" href="{{asset('css/glightbox.css')}}" />
         <!-- Main css -->
         <link rel="stylesheet" href="{{asset('css/main.css')}}" />
         <!-- Detail css -->
         <link rel="stylesheet" href="{{asset('css/detail.css')}}" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+        <script src="{{asset('js/jquery-3.6.0.min.js')}}"></script>
     </head>
     <body>
         <div class="preloader">

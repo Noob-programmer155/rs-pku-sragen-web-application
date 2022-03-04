@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
-use App\Http\Controllers\{HomeController,AppointmentController,AboutusController};
+use App\Http\Controllers\{HomeController,AppointmentController,
+  AboutusController,ProjectsController};
 use App\Http\Controllers\Department\Service\ServiceController;
 use App\Http\Controllers\Department\DepartmentController;
 
@@ -28,7 +29,7 @@ Route::get('/lost-password',[HomeController::class,'login']);
 Route::get('/signup',[HomeController::class,'signIn']);
 Route::post('/signup',[HomeController::class,'signIn_post']);
 
-Route::get('/pelayanan/{name}',[HomeController::class,'signIn']);
+Route::get('/pelayanan/{name}',[ServiceController::class,'getService']);
 
 Route::get('/pelayanan-kami',[ServiceController::class,'getAllService']);
 
@@ -38,9 +39,9 @@ Route::get('/departemen-kami',[DepartmentController::class,'getAllDepartment']);
 
 Route::get('/departemen/{name}',[DepartmentController::class,'getDepartment']);
 
-Route::get('/proyek/{name}',[HomeController::class,'signIn']);
+Route::get('/proyek/{name}',[ProjectsController::class,'getProject']);
 
-Route::get('/proyek-kami',[HomeController::class,'signIn']);
+Route::get('/proyek-kami',[ProjectsController::class,'getAllProject']);
 
 Route::get('/dokter-kami',[HomeController::class,'signIn']);
 

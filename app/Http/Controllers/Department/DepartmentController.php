@@ -28,6 +28,7 @@ class DepartmentController extends Controller{
   public function getDepartment(Request $request,$name){
     $global = global_attribute::select('name','description') -> whereIn('name',['email','telp','location']) -> get();
     $social_global = global_attribute::select('name','description') -> whereIn('name',[...DataList::social]) -> get();
+    $departmentAll = department::select('id','name') -> whereNotIn('id',[$request -> iddep]) -> take(10) -> get();
     $departments = department::where('id',$request -> iddep) -> where('name',$name) -> get() -> map(function ($data) use ($request){
       $data -> description = AutoModifableText::getText($data -> description);
       $data -> icon = DataList::department_icon[$data -> icon];
@@ -45,7 +46,8 @@ class DepartmentController extends Controller{
       return [$data, 'rating' => ['rating'=>$rating,'total'=>$total],'services'=>$services,'image'=>collect($image)];
     });
     return view("User/Component/Department/DepartmentDetail",[
-      'dep_name'=>$name,'global' => $global,'social_global' => $social_global,'department'=>$departments
+      'dep_name'=>$name,'global' => $global,'social_global' => $social_global,'department'=>$departments,
+      'department_list'=>$departmentAll
     ]);
   }
 }

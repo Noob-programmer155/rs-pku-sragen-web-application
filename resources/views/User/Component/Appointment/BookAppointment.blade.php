@@ -55,7 +55,7 @@
                             <div class="col-lg-6 col-md-6 col-12 p-0">
                                 <div class="appointment-input">
                                     <label for="department"><i class="lni lni-notepad"></i></label>
-                                    <select name="department" id="department-appointment">
+                                    <select name="department" id="department-appointment" onmousedown="if(this.options.length>5){this.size=5;}"  onchange='this.size=0;' onblur="this.size=0;">
                                         <option value="none" selected disabled>Department</option>
                                         @foreach($department_list as $dept)
                                             <option value="{{$dept -> id}}">{{$dept -> name}}</option>
@@ -66,7 +66,7 @@
                             <div class="col-lg-6 col-md-6 col-12 p-0">
                                 <div class="appointment-input">
                                     <label for="doctor"><i class="lni lni-sthethoscope"></i></label>
-                                    <select name="doctor" id="doctor-appointment">
+                                    <select name="doctor" id="doctor-appointment" onmousedown="if(this.options.length>5){this.size=5;}"  onchange='this.size=0;' onblur="this.size=0;">
                                         <option value="none" selected disabled>Doctor</option>
                                         @foreach($doctor_list as $doc)
                                             <option value="{{$doc -> id}}" data-department="{{$doc -> department}}">{{$doc -> username}}</option>
@@ -97,17 +97,15 @@
     </div>
 </section>
 
+@include("User.Component.Utils.footerHome")
+
 <!--bootstrap js-->
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <!--Wow js -->
 <script src="{{asset('js/wow.min.js')}}"></script>
-<!--Tiny js -->
-<script src="{{asset('js/tiny-slider.js')}}"></script>
-<!-- Glightbox js -->
-<script src="{{asset('js/glightbox.min.js')}}"></script>
 <!-- Main js -->
 <script src="{{asset('js/main.js')}}"></script>
 <!-- Appointment js -->
 <script src="{{asset('js/appointment.js')}}"></script>
 
-@include("User.Component.Utils.footerHome")
+@include("User.Component.Utils.footer")

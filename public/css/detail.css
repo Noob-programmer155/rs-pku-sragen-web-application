@@ -2,182 +2,223 @@ main{
   width: 100%;
 }
 
-p,li{
+p,li,a{
   font-size: 1rem;
 }
 
-i{
+i,button{
   font-size: 1.3rem;
 }
 
-h3{
-  font-size: 1.5rem;
-}
-
-.department-detail{
-  display: block;
-  margin-top: 30px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.department-detail .global{
-  display: block;
-}
-
-.department-detail .global i {
-  color: Lime;
-}
-
-.department-detail .global h3 {
+.service-details .single-widget .service-category h3{
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
-.department-detail .global p{
-  padding-top: 10px;
-  text-indent: 25px;
-  text-align: justify;
-}
-
-.department-detail .global .title{
-  display: flex;
-  flex-direction: column;
-  background-color: #f2f2f2;
-  border-radius: 0px 0px 25px 25px;
-}
-
-.department-detail .global .title img{
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-  height: 25rem;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 10px;
-}
-
-.department-detail .global .title h1{
-  font-size: 2rem;
+.service-details .content .details-content .thumb h1{
+  font-size: 3rem;
   line-height: 6rem;
-  text-align: center;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
-.department-detail .global .title table{
+.service-details .content .details-content table{
   margin: 0 auto;
   text-align: left;
   font-size: 1rem;
 }
 
-.department-detail .global .title table tr:first-child td{
-  padding: 3px;
-  padding-left: 6px;
-  padding-right: 6px;
-  padding-top: 2rem;
-  color:#000000;
+.service-details .content .details-content table tr td{
+  color:#666666;
+  padding-top: .5rem;
 }
 
-.department-detail .global .title table tr:last-child td{
-  padding: 3px;
-  padding-left: 6px;
-  padding-right: 6px;
+.service-details .content .details-content table tr td:last-child{
+  padding-left: 1rem;
+}
+
+.service-details .content .details-content table tr:last-child td{
   padding-bottom: 3rem;
+}
+
+.service-details .content .details-content table i{
+  color:#fff;
+  font-size: 2rem;
+  background-color: #00ccff;
+  padding: .5rem;
+  padding-bottom: .6rem;
+  border-radius: 10px;
+  border-bottom: .2rem solid #0066ff;
+}
+
+.service-details .content .details-content table span{
+  font-size: 1rem;
+  font-weight: 700;
   color:#000000;
 }
 
-.department-detail .global .title table i{
-  color:#00ccff;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.department-detail .global .title table span{
-  font-size: .8rem;
-  font-weight: 700;
-}
-
-.department-detail .global .title table span ins{
+.service-details .content .details-content table span ins{
   color: #ffcc00;
   font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
-.department-detail .image{
-  display: block;
+.service-details .content h2{
+  font-size: 2rem;
+}
+
+.service-details .content .services .services-content .single-list .shape1 {
+  height: 100px;
+  position: absolute;
+  right: -10rem;
+  top: -3.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.service-details .content .services .services-content .single-list .shape2 {
+  height: 100px;
+  position: absolute;
+  right: -15rem;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.service-details .content .services .services-content .single-list:hover .shape1 {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  z-index: 9;
+}
+
+.service-details .content .services .services-content .single-list:hover .shape2 {
+  opacity: 1;
+  visibility: visible;
+  right: -12rem;
+  bottom: 0;
+  z-index: 9;
+}
+
+.service-details .image{
+  display: flex;
+  justify-content: center;
   margin-bottom: 80px;
 }
 
-.department-detail .image .container-image{
+.service-details .image .container-image{
   display: flex;
-  justify-content: center;
 }
 
-.department-detail .image .container-image button{
+.service-details .image button{
   position: relative;
   top: 0;
   background-color: rgba(0, 0, 0, 0.1);
   border: none;
+  height: 100%;
   transition: all .5s;
 }
 
-.department-detail .image .container-image button:hover{
+.service-details .image button:hover{
   background-color: rgba(0, 0, 0, 0.3);
   top: -10px;
 }
 
-.department-detail .image .container-image button .reverse{
+.service-details .image button .reverse{
   transform: rotate(var(--rotate));
   -webkit-transform: rotate(var(--rotate));
   fill: #404040;
   transition: all .5s;
 }
 
-.department-detail .image .container-image button:hover .reverse{
+.service-details .image button:hover .reverse{
   fill: #fff;
 }
 
-.department-detail .image .item-image-container{
+.service-details .image .item-image-container-root{
   display: flex;
   min-width: 9rem;
   max-width: 9rem;
   align-items: center;
+  overflow: hidden;
 }
 
-.department-detail .image .container-image .item-image-container .item-image img{
+.service-details .image .item-image-container{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.service-details .image .container-image .item-image-container .item-image {
+  max-width: 9rem;
+  min-width: 9rem;
+  overflow: hidden;
+}
+
+.service-details .image .container-image .item-image-container .item-image img{
   width: 9rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0px;
   transition: all .5s;
 }
 
-.department-detail .image .container-image .item-image-container .item-image button{
+.service-details .image .container-image .item-image-container .item-image a{
   background-color: transparent;
 }
 
-.department-detail .image .container-image .item-image-container .item-image button:hover{
+.service-details .image .container-image .item-image-container .item-image a:hover{
   z-index: 99;
-  padding-left: 4rem;
-  padding-right: 4rem;
 }
 
-.department-detail .image .container-image .item-image-container .item-image button:hover img{
+.service-details .image .container-image .item-image-container .item-image a:hover img{
   box-shadow: 0 10px 50px -10px #000000;
   transform: scale(1.4);
-  -webkit-transform: scale(1.4);
 }
 
-@media screen and (min-width:650px){
-  .department-detail .image .container-image .item-image-container .item-image img{
-    width: 9rem;
-  }
-  .department-detail .image .item-image-container{
+.services .services-content .pagination-service{
+  display: flex;
+  justify-content: center;
+}
+
+.services .services-content .pagination{
+  display: flex;
+}
+
+.services .services-content .hidden{
+  display: none;
+}
+
+.pagination-service .pagination .page-item .active{
+  color: #fff;
+  background: #0099ff;
+}
+
+@media only screen and (min-width:650px){
+  .service-details .image .item-image-container-root{
     max-width: calc(3 * 9rem);
   }
 }
 
-@media screen and (min-width:900px){
-  .department-detail .global .title img{
-    width: 80%;
-  }
-  .department-detail .image .item-image-container{
+@media only screen and (min-width:900px){
+  .service-details .image .item-image-container-root{
     max-width: calc(5 * 9rem);
+  }
+}
+
+@media only screen and (min-width:2300px){
+  .service-details .content .services .services-content .single-list .shape1 {
+    right: -6rem;
+    top: -2.5rem;
+  }
+  .service-details .content .services .services-content .single-list:hover .shape2 {
+    right: -8rem;
   }
 }

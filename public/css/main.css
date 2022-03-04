@@ -3,7 +3,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 body {
@@ -19,7 +19,7 @@ p {
   margin: 0;
   padding: 0;
   font-size: 1rem;
-  line-height: 26px;
+  line-height: 1.8rem;
 }
 
 a,li{
@@ -927,7 +927,7 @@ ol {
   color: #fff;
   font-weight: 600;
   position: relative;
-  line-height: 50px;
+  line-height: 3.3rem;
 }
 
 .breadcrumbs .breadcrumbs-content .breadcrumb-nav {
@@ -1016,7 +1016,7 @@ ol {
 .section-title h2 {
   font-size: 2.8rem;
   margin-bottom: 20px;
-  line-height: 48px;
+  line-height: 3.6rem;
   text-transform: capitalize;
   position: relative;
   font-weight: 700;
@@ -1037,7 +1037,7 @@ ol {
 
 .section-title p {
   font-size: 1rem;
-  line-height: 26px;
+  line-height: 1.8rem;
 }
 
 .section-title.align-right {
@@ -1072,7 +1072,7 @@ ol {
 .scroll-top {
   width: 45px;
   height: 45px;
-  line-height: 45px;
+  line-height: 1.8rem;
   background: #88c250;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1667,7 +1667,7 @@ ol {
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   html {
-    font-size: 15px;
+    font-size: 18px;
   }
   .navbar-nav .nav-item a.dd-menu {
     padding-right: 30px;
@@ -1988,7 +1988,7 @@ ol {
 .hero-area .tns-controls button {
   width: 45px;
   height: 45px;
-  line-height: 42px;
+  line-height: 1.8rem;
   cursor: pointer;
   z-index: 2;
   color: #fff;
@@ -2058,7 +2058,7 @@ ol {
 .hero-area .hero-text h2 {
   color: #fff;
   font-size: 3.2rem;
-  line-height: 55px;
+  line-height: 4rem;
   font-weight: 700;
   margin-bottom: 30px;
   position: relative;
@@ -2104,7 +2104,7 @@ ol {
   position: absolute;
   height: 80px;
   width: 80px;
-  line-height: 80px;
+  line-height: 5.5rem;
   text-align: center;
   color: #88c250;
   background-color: #fff;
@@ -2113,7 +2113,7 @@ ol {
   top: 50%;
   margin-left: -40px;
   margin-top: -80px;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   padding-left: 3px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -2214,7 +2214,7 @@ ol {
   display: block;
   font-size: 2.5rem;
   margin-bottom: 25px;
-  line-height: 45px;
+  line-height: 3.2rem;
   text-transform: capitalize;
   position: relative;
   font-weight: 700;
@@ -2224,7 +2224,7 @@ ol {
   font-size: 1.8rem;
   margin-top: 40px;
   margin-bottom: 8px;
-  line-height: 45px;
+  line-height: 2.6rem;
   text-transform: capitalize;
   position: relative;
   font-weight: 600;
@@ -2232,7 +2232,18 @@ ol {
 
 .about-us .content-right p {
   font-size: 1rem;
-  line-height: 26px;
+  line-height: 1.8rem;
+}
+
+.about-us .content-right .description p {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .about-us .content-right .list {
@@ -2281,7 +2292,7 @@ ol {
 .our-achievement .single-achievement i {
   height: 70px;
   width: 70px;
-  line-height: 70px;
+  line-height: 4.5rem;
   text-align: center;
   display: inline-block;
   border-radius: 5px;
@@ -2577,7 +2588,7 @@ ol {
 
 .pricing-table .single-table .table-head .amount {
   font-size: 2.8rem;
-  line-height: 45px;
+  line-height: 3.6rem;
   font-weight: 600;
   color: #081828;
 }
@@ -2594,7 +2605,7 @@ ol {
 
 .pricing-table .single-table .table-head .title {
   font-size: 1.4rem;
-  line-height: 26px;
+  line-height: 2.2rem;
   color: #88c250;
   font-weight: 500;
   text-transform: capitalize;
@@ -2611,7 +2622,7 @@ ol {
   position: relative;
   display: block;
   font-size: 1rem;
-  line-height: 26px;
+  line-height: 1.8rem;
   font-weight: 400;
   padding: 15px 0;
   border-bottom: 1px solid #eee;
@@ -2660,7 +2671,7 @@ ol {
   display: inline-block;
   height: 30px;
   width: 30px;
-  line-height: 28px;
+  line-height: 1.8rem;
   text-align: center;
   border-radius: 50%;
   border: 1px solid #eee;
@@ -2809,7 +2820,7 @@ ol {
 }
 
 .latest-news-area .single-news .content .title {
-  line-height: 25px;
+  line-height: 2.3rem;
 }
 
 .latest-news-area .single-news .content .title a {
@@ -2836,7 +2847,7 @@ ol {
 .latest-news-area .single-news .content p {
   margin-top: 20px;
   font-size: 1rem;
-  line-height: 22px;
+  line-height: 1.6rem;
 }
 
 .latest-news-area .single-news .content .meta-info {
@@ -2844,7 +2855,7 @@ ol {
 }
 
 .latest-news-area .single-news .content .meta-info li {
-  font-size: 1.3rem;
+  font-size: 1rem;
   display: block;
   text-align: right;
   margin-bottom: 10px;
@@ -2864,8 +2875,8 @@ ol {
 }
 
 .latest-news-area .single-news .content .meta-info li a img {
-  height: 30px;
-  width: 30px;
+  height: 2rem;
+  width: 2rem;
   border-radius: 50%;
   display: inline-block;
   object-fit: cover;
@@ -3007,7 +3018,7 @@ ol {
 .blog-single .post-title {
   font-weight: 700;
   margin-bottom: 20px;
-  line-height: 32px;
+  line-height: 2.6rem;
 }
 
 .blog-single .post-title a {
@@ -3022,14 +3033,14 @@ ol {
 .blog-single p {
   font-size: 1rem;
   margin: 20px 0;
-  line-height: 26px;
+  line-height: 1.8rem;
 }
 
 .blog-single h3 {
   font-size: 1.6rem;
   margin-bottom: 20px;
   font-weight: 600;
-  line-height: 28px;
+  line-height: 2.4rem;
 }
 
 .blog-single .list {
@@ -3057,7 +3068,7 @@ ol {
   width: 18px;
   background: #49b0c1;
   text-align: center;
-  line-height: 18px;
+  line-height: 1.4rem;
   border-radius: 0;
 }
 
@@ -3086,7 +3097,7 @@ blockquote .icon i {
 blockquote h4 {
   font-weight: 400;
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.8rem;
   color: #fff;
 }
 
@@ -3362,7 +3373,7 @@ blockquote .shape {
   margin-bottom: 40px;
   position: relative;
   font-weight: 600;
-  line-height: 28px;
+  line-height: 2.2rem;
   z-index: 1;
 }
 
@@ -3460,7 +3471,7 @@ blockquote .shape {
 
 .sidebar .widget.popular-feeds .single-popular-feed .feed-desc .post-title {
   margin-bottom: 12px;
-  line-height: 1.5;
+  line-height: 2rem;
 }
 
 .sidebar .widget.popular-feeds .single-popular-feed .feed-desc .post-title a {
@@ -3638,14 +3649,16 @@ blockquote .shape {
 }
 
 .departments .nav .nav-link {
-  padding: 20px 42px;
-  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
   font-weight: 500;
   color: #081828;
   border-radius: 0;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-right: 1px solid rgba(221, 221, 221, 0.514);
   border-bottom: 3px solid #eee !important;
 }
@@ -3687,14 +3700,10 @@ blockquote .shape {
 }
 
 .departments .nav .nav-link i {
-  display: inline-block;
   font-size: 1.3rem;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
+  padding: .5rem;
   border: 1px solid #eee;
   border-radius: 50%;
-  text-align: center;
   margin-right: 10px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -3719,11 +3728,11 @@ blockquote .shape {
 
 .departments .department-content .text h3 {
   font-size: 2.4rem;
-  line-height: 45px;
+  line-height: 3.2rem;
   margin-bottom: 25px;
 }
 
-.departments .department-content .text p {
+.departments .department-content .text .description p {
   margin: 30px 0;
   display: block;
 }
@@ -3732,21 +3741,21 @@ blockquote .shape {
   margin-top: 30px;
 }
 
-.departments .department-content .text .list {
-  margin-top: 40px;
-  margin-bottom: 40px;
+.departments .department-content .text .description .list {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
 }
 
-.departments .department-content .text .list li {
+.departments .department-content .text .description .list li {
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: .5rem;
   font-size: 1rem;
   color: #777;
-  padding-left: 30px;
+  padding-left: 2rem;
   position: relative;
 }
 
-.departments .department-content .text .list li i {
+.departments .department-content .text .description .list li i {
   color: #88c250;
   font-size: 1.4rem;
   display: inline-block;
@@ -3755,7 +3764,7 @@ blockquote .shape {
   top: 3px;
 }
 
-.departments .department-content .text .list li:last-child {
+.departments .department-content .text .description .list li:last-child {
   margin: 0;
 }
 
@@ -3776,7 +3785,7 @@ blockquote .shape {
 
 .departments .rating .star div{
   display: flex;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .departments .rating .star span{
@@ -3794,7 +3803,7 @@ blockquote .shape {
 
 .departments .rating .part{
   position: relative;
-  left: -19px;
+  left: -1.7rem;
   clip-path: polygon(var(--range) 0%, var(--range) 100%, 0% 100%, 0% 0%);
 }
 
@@ -3859,7 +3868,7 @@ blockquote .shape {
   font-weight: 700;
   text-transform: uppercase;
   position: absolute;
-  top: -40px;
+  top: -3rem;
   left: 0;
   color: #eee;
   z-index: -1;
@@ -3984,7 +3993,7 @@ blockquote .shape {
 
 .login .form-head .title {
   font-size: 2rem;
-  line-height: 1.42;
+  line-height: 2.4rem;
   font-weight: 500;
   margin-bottom: 30px;
   text-align: center;
@@ -3998,20 +4007,20 @@ blockquote .shape {
   display: block;
   margin-bottom: 0.5rem;
   color: #888;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 .login .form-head form .form-group input {
   width: 100%;
   min-height: 50px;
-  padding: 3px 20px;
+  padding: .6rem 1rem;
   color: #081828;
   border: 1px solid #eee;
   border-radius: 5px;
   outline: 0;
   background-color: #fff;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .login .form-head form .check-and-pass .form-check {
@@ -4148,6 +4157,7 @@ blockquote .shape {
 }
 
 .login .form-head .socila-login ul li a.google img {
+  margin-left: 1rem;
   width: 30px;
   height: 30px;
 }
@@ -4209,7 +4219,7 @@ blockquote .shape {
   position: relative;
   padding: 40px;
   background-color: #f9f9f9;
-  text-align: left;
+  align-items: right;
   border: 1px solid #eee;
   border-radius: 0;
   -webkit-transition: all 0.4s ease;
@@ -4220,8 +4230,8 @@ blockquote .shape {
 .services .services-content .single-list .shape1 {
   height: 100px;
   position: absolute;
-  right: 30px;
-  top: -50px;
+  right: .4rem;
+  top: -3.5rem;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.4s ease;
@@ -4233,7 +4243,7 @@ blockquote .shape {
 .services .services-content .single-list .shape2 {
   height: 100px;
   position: absolute;
-  right: -30px;
+  right: -2rem;
   bottom: 0;
   opacity: 0;
   visibility: hidden;
@@ -4259,12 +4269,12 @@ blockquote .shape {
 
 .services .services-content .single-list i {
   color: #88c250;
-  font-size: 2.1rem;
+  font-size: 2rem;
   display: inline-block;
   margin-bottom: 30px;
-  height: 70px;
-  width: 70px;
-  line-height: 68px;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
   text-align: center;
   border-radius: 5px;
   -webkit-transition: all 0.4s ease;
@@ -4344,7 +4354,11 @@ blockquote .shape {
 .service-details .content p {
   display: block;
   margin: 20px 0;
-  line-height: 24px;
+  line-height: 1.4rem;
+}
+
+.service-details .content .details-content p {
+  text-indent: 2rem;
 }
 
 .service-details .content p:last-child {
@@ -4358,14 +4372,14 @@ blockquote .shape {
 }
 
 .service-details .content .list {
-  margin: 40px 0;
+  margin: 2rem 0 1rem 0;
 }
 
 .service-details .content .list li {
   display: block;
   margin-bottom: 15px;
   position: relative;
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .service-details .content .list li:last-child {
@@ -4377,12 +4391,10 @@ blockquote .shape {
   left: 0;
   top: 1px;
   color: #fff;
-  font-size: .6rem;
-  height: 18px;
-  width: 18px;
+  font-size: 1rem;
+  padding: .3rem;
   background: #49b0c1;
   text-align: center;
-  line-height: 18px;
   border-radius: 0;
 }
 
@@ -4515,36 +4527,28 @@ blockquote .shape {
   padding-left: 10px;
 }
 
-.service-sidebar .address ul li {
-  position: relative;
-  display: block;
-  margin-bottom: 25px;
-  padding-left: 45px;
+.service-sidebar .address table td {
+  padding-bottom: 1rem;
   font-size: 1rem;
   color: #888;
 }
 
-.service-sidebar .address ul li:last-child {
-  margin: 0;
+.service-sidebar .address table tr td:last-child {
+  padding-left: .5rem;
 }
 
-.service-sidebar .address ul li i {
+.service-sidebar .address table td i {
   font-size: 2rem;
   color: #49b0c1;
-  position: absolute;
-  left: 0;
-  top: 4px;
 }
 
-.service-sidebar .address ul li a {
-  font-size: 1.3rem;
-  display: block;
-  margin-top: 3px;
+.service-sidebar .address table td a {
+  font-size: 1.1rem;
   font-weight: 500;
   color: #081828;
 }
 
-.service-sidebar .address ul li a:hover {
+.service-sidebar .address table td a:hover {
   color: #49b0c1;
 }
 
@@ -4975,9 +4979,8 @@ blockquote .shape {
 }
 
 .portfolio-section .pf-content .detail-btn {
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
+  width: 3rem;
+  padding: .7rem 1rem;
   text-align: center;
   border: 1px solid #eee;
   border-radius: 5px;
@@ -5048,7 +5051,7 @@ blockquote .shape {
 .portfolio-details .content p {
   display: block;
   margin: 20px 0;
-  line-height: 24px;
+  line-height: 1.8rem;
 }
 
 .portfolio-details .content p:last-child {
@@ -5092,7 +5095,7 @@ blockquote .shape {
   width: 18px;
   background: #49b0c1;
   text-align: center;
-  line-height: 18px;
+  line-height: 1rem;
   border-radius: 0;
 }
 
@@ -5199,7 +5202,6 @@ blockquote .shape {
 
 .how-works .single-work {
   text-align: center;
-  padding: 0 30px;
   background-color: transparent;
   padding: 60px 55px;
   background-color: #49b0c1;
@@ -5232,9 +5234,9 @@ blockquote .shape {
 }
 
 .how-works .single-work .main-icon {
-  height: 80px;
-  width: 80px;
-  line-height: 80px;
+  padding: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   background-color: rgba(255, 255, 255, 0.281);
   color: #fff;
   text-align: center;
@@ -5266,7 +5268,7 @@ blockquote .shape {
 
 @media only screen and (min-width: 991px) and (max-width: 1200px) {
   html {
-    font-size: 15px;
+    font-size: 18px;
   }
   .section-title {
     margin-bottom: 50px;
@@ -5323,7 +5325,7 @@ blockquote .shape {
 
   .section-title h2 {
     font-size: 2.4rem;
-    line-height: 38px;
+    line-height: 2.8rem;
   }
 
   .section-title p {
@@ -5415,7 +5417,7 @@ blockquote .shape {
 
   .hero-area .hero-text h2 {
     font-size: 2.4rem;
-    line-height: 45px;
+    line-height: 2.8rem;
     margin-bottom: 22px;
   }
 
@@ -5458,7 +5460,7 @@ blockquote .shape {
 
   .about-us .content-right h2 {
     font-size: 2.4rem;
-    line-height: 42px;
+    line-height: 2.7rem;
   }
 
   .about-us .content-right .list {
@@ -5594,7 +5596,7 @@ blockquote .shape {
   .how-works .single-work .main-icon {
     height: 70px;
     width: 70px;
-    line-height: 72px;
+    line-height: 2.8rem;
     font-size: 2.4rem;
   }
 
@@ -5664,7 +5666,7 @@ blockquote .shape {
   .section-title h2 {
     font-size: 1.8rem;
     margin-top: 3px;
-    line-height: 35px;
+    line-height: 2.2rem;
   }
 
   .section-title p {
@@ -5687,7 +5689,7 @@ blockquote .shape {
 
   .breadcrumbs .page-title {
     font-size: 1.8rem;
-    line-height: 30px !important;
+    line-height: 2.2rem !important;
   }
 
   .breadcrumbs .breadcrumb-nav {
@@ -5839,7 +5841,7 @@ blockquote .shape {
 
   .hero-area .hero-text h2 {
     font-size: 2rem;
-    line-height: 35px;
+    line-height: 2.4rem;
     margin-bottom: 22px;
   }
 
@@ -5916,7 +5918,7 @@ blockquote .shape {
 
   .about-us .content-right h2 {
     font-size: 1.8rem;
-    line-height: 35px;
+    line-height: 2.2rem;
   }
 
   .about-us .content-right .list {
@@ -5952,7 +5954,7 @@ blockquote .shape {
     font-size: 1rem;
     height: 35px;
     width: 35px;
-    line-height: 35px;
+    line-height: 1.4rem;
   }
 
   .departments .nav {
@@ -6086,7 +6088,7 @@ blockquote .shape {
   .how-works .single-work .main-icon {
     height: 70px;
     width: 70px;
-    line-height: 72px;
+    line-height: 2.8rem;
     font-size: 2.4rem;
   }
 
@@ -6224,7 +6226,7 @@ blockquote .shape {
   }
 
   .post-details .post-title {
-    line-height: 30px !important;
+    line-height: 1.8rem !important;
   }
 
   .post-details .post-title a {
@@ -6247,7 +6249,7 @@ blockquote .shape {
 
   .error-area .error-content h1 {
     font-size: 5rem !important;
-    line-height: 80px !important;
+    line-height: 5.4rem !important;
   }
 
   .error-area .error-content h2 {
@@ -6398,7 +6400,7 @@ blockquote .shape {
   }
 
   .footer .footer-top .cta p {
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
   }
 
   .footer .footer-top .form {
@@ -6434,8 +6436,8 @@ blockquote .shape {
   }
 
   .footer .single-footer.opening-hours ul li {
-    overflow: hidden;
     color: #fff;
+    padding-right: 10px !important;
     margin-bottom: 13px !important;
   }
 
@@ -6458,9 +6460,24 @@ blockquote .shape {
   }
 }
 
-@media only screen and (min-width: 2100px){
+@media only screen and (min-width: 2300px){
   html {
     font-size: 22px;
+  }
+  .about-us .content-left .video{
+    font-size: 1.5rem;
+    line-height: 3.8rem;
+  }
+  .our-achievement .single-achievement i{
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+  .departments .nav .nav-link i{
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  .services .services-content .single-list .shape1 {
+    top: -2.5rem;
   }
 }
 
@@ -6505,7 +6522,7 @@ blockquote .shape {
 .contact-us .single-info .info-icon {
   height: 50px;
   width: 50px;
-  line-height: 50px;
+  line-height: 2rem;
   text-align: center;
   display: block;
   color: #49b0c1;
@@ -6612,7 +6629,7 @@ blockquote .shape {
 }
 
 .contact-us .form-main .form-title p {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .contact-us .form .form-group {
@@ -6696,7 +6713,7 @@ blockquote .shape {
   color: #fff;
   margin-bottom: 25px;
   font-weight: 800;
-  line-height: 100px;
+  line-height: 9.5rem;
 }
 
 .error-area .error-content h2 {
@@ -6843,7 +6860,7 @@ blockquote .shape {
   width: 65px;
   height: 65px;
   border-radius: 0%;
-  line-height: 65px;
+  line-height: 1.4rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   font-weight: 500;
@@ -6904,7 +6921,7 @@ blockquote .shape {
 }
 
 .footer .footer-top .cta p {
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #fff;
 }
 
@@ -7048,9 +7065,7 @@ blockquote .shape {
 }
 
 .footer .single-footer.f-about .social li a {
-  height: 30px;
-  width: 30px;
-  line-height: 32px;
+  padding: .7rem;
   text-align: center;
   display: block;
   color: #49b0c1;
@@ -7106,7 +7121,7 @@ blockquote .shape {
 .footer .single-footer.f-contact ul li {
   display: block;
   margin-bottom: 15px;
-  line-height: 25px;
+  line-height: 1.4rem;
   color: #fff;
   position: relative;
   padding-left: 30px;

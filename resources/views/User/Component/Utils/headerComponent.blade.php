@@ -22,7 +22,7 @@
         <!-- Tiny-slider css -->
         <link rel="stylesheet" href="{{asset('css/tiny-slider.css')}}" />
         <!--Glightbox  -->
-        <link rel="stylesheet" href="{{asset('css/glightbox.min.css')}}" />
+        <link rel="stylesheet" href="{{asset('css/glightbox.css')}}" />
         <!-- Main css -->
         <link rel="stylesheet" href="{{asset('css/main.css')}}" />
     </head>

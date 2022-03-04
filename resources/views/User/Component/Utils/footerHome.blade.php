@@ -53,7 +53,6 @@
 
                 </div>
                 <div class="col-lg-3 col-md-6 col-12">
-
                     <div class="single-footer f-link">
                         <h3>Useful Links</h3>
                         <div class="row">
@@ -76,7 +75,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="col-lg-3 col-md-6 col-12">
 

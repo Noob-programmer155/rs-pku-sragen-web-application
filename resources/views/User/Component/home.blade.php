@@ -34,7 +34,6 @@
 
 <section class="appointment">
     <div class="container">
-
         <div class="appointment-form">
             <div class="row">
                 <div class="col-lg-6 col-12">
@@ -71,7 +70,7 @@
                     @foreach($aboutUs[0] as $ab => $about)
                       <span class="sub-heading">About</span>
                       <h2>{{$about -> title}}</h2>
-                      {!! $about -> description !!}
+                      <div class="description">{!! $about -> description !!}</div>
                       <!-- view raw description  -->
                       <!-- {{$about['description']}} -->
                       <div class="button">
@@ -272,9 +271,9 @@
                         </div>
                         <div class="portfolio-overlay">
                             <div class="pf-content">
-                                <a href="/proyek/{{$proj -> name}}?idproj={{$proj -> id}}" class="detail-btn"><i class="lni lni-link"></i></a>
+                                <a href="/proyek/{{$proj -> title}}?idproj={{$proj -> id}}" class="detail-btn"><i class="lni lni-link"></i></a>
                                 <span class="category">{{$proj -> name}}</span>
-                                <h4><a href="/proyek/{{$proj -> name}}?idproj={{$proj -> id}}">{{$proj -> title}}</a></h4>
+                                <h4><a href="/proyek/{{$proj -> title}}?idproj={{$proj -> id}}">{{$proj -> title}}</a></h4>
                             </div>
                         </div>
                     </div>
@@ -503,7 +502,7 @@
 <script src="{{asset('js/wow.min.js')}}"></script>
 <!--Tiny js -->
 <script src="{{asset('js/tiny-slider.js')}}"></script>
-<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<script src="{{asset('js/glightbox.js')}}"></script>
 <!-- Count js -->
 <script src="{{asset('js/count-up.min.js')}}"></script>
 <!-- Imagesloaded js -->
@@ -512,6 +511,8 @@
 <script src="{{asset('js/isotope.min.js')}}"></script>
 <!-- Main js -->
 <script src="{{asset('js/main.js')}}"></script>
+<!-- Home js -->
+<script src="{{asset('js/home.js')}}"></script>
 
 <script type="text/javascript">
     //======== Hero Slider
@@ -573,15 +574,31 @@
         }
     });
     document.addEventListener('DOMContentLoaded',function (event) {
-      const gligh = GLightbox({selector: '.glightbox2'});
-      @foreach($aboutUs[1] as $mediaItem)
-        @if($mediaItem -> name === 'about_media')
-          gligh.insertSlide(
-            {href: '/images/video/{{$mediaItem -> media}}',type: 'video'}
-          );
-          gligh.reload();
-        @endif
-      @endforeach
+      GLightbox({
+        selector: '.glightbox2',
+        plyr: {
+          css: 'https://cdn.plyr.io/3.5.6/plyr.css', // Default not required to include
+          js: 'https://cdn.plyr.io/3.5.6/plyr.js', // Default not required to include
+          config: {
+            ratio: '16:9', // or '4:3'
+            muted: false,
+            hideControls: true,
+            youtube: {
+              noCookie: true,
+              rel: 0,
+              showinfo: 0,
+              iv_load_policy: 3
+            },
+            vimeo: {
+              byline: false,
+              portrait: false,
+              title: false,
+              speed: true,
+              transparent: false
+            }
+          }
+        }
+      });
     });
 </script>
 

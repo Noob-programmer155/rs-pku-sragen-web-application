@@ -44,7 +44,7 @@ class HomeController extends Controller
     $achivement = global_attribute::select('name','description') -> whereIn('name',['total_rooms','year_experience']) -> orderBy('name','ASC') -> get();
     $doc_count = doctor::select('id') -> count('id');
     $pat_count = patient::select('id') -> count('id');
-    $projects = DB::select('select projects.id,title,description,image_init,b.name as name from projects inner join category_research as b on category = b.id order by project_date limit 6');
+    $projects = DB::select('select projects.id,title,image_init,b.name as name from projects inner join category_research as b on category = b.id order by project_date limit 6');
     $init_projects = category_research::select('name') -> get();
     $testimony = patient_response::select('name','patient_type','description','image') -> orderBy('id', 'desc') -> take(15) -> get();
     $doctors = doctor::select('id','image','username','profession') -> take(4) -> get() -> map(function ($data)

@@ -97,6 +97,8 @@
     </div>
 </section>
 
+@include('User.Component.Utils.footerHome')
+
 <!--bootstrap js-->
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <!--Wow js -->
@@ -104,4 +106,4 @@
 <!-- Main js -->
 <script src="{{asset('js/main.js')}}"></script>
 
-@include('User.Component.Utils.footerHome')
+@include('User.Component.Utils.footer')
