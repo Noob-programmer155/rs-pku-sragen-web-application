@@ -40,16 +40,21 @@
         </div>
         <div class="row grid-proj" style="margin-top:80px;">
             @foreach($projects[1] as $proj)
-                <div class="col-lg-4 col-md-6 grid-item-proj {{$proj -> name}}">
+                <div class="col-xl-4 col-md-6 grid-item-proj {{$proj -> name}}">
                     <div class="portfolio-item-wrapper">
                         <div class="portfolio-img">
-                            <img src="/images/portfolio/{{$proj -> image_init}}" alt="{{$proj -> title}}">
+                            <img src="/images/project/{{$proj -> image_init}}" alt="{{$proj -> title}}">
                         </div>
                         <div class="portfolio-overlay">
                             <div class="pf-content">
-                                <a href="/proyek/{{$proj -> title}}?idproj={{$proj -> id}}" class="detail-btn"><i class="lni lni-link"></i></a>
                                 <span class="category">{{$proj -> name}}</span>
-                                <h4><a href="/proyek/{{$proj -> title}}?idproj={{$proj -> id}}">{{$proj -> title}}</a></h4>
+                                <h4>{{$proj -> title}}</h4>
+                                <a href="/project/{{$proj -> title}}?idproj={{$proj -> id}}">
+                                    <div>
+                                        <i class="lni lni-link"></i>
+                                        <q>klik disini untuk melihat</q>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>

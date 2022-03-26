@@ -9,7 +9,7 @@
                 </div>
                 <ul class="breadcrumb-nav">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/pelayanan-kami">Service</a></li>
+                    <li><a href="/services">Service</a></li>
                     <li>{{$serv_name}}</li>
                 </ul>
             </div>
@@ -25,8 +25,8 @@
                     <div class="service-sidebar">
                         <section class="single-widget search-widget">
                             <h3>Search Here</h3>
-                            <form action="#">
-                                <input type="text" placeholder="Search Here...">
+                            <form action="https://www.google.com/search" method="get" target="_blank">
+                                <input type="search" name='q' placeholder="Search Here...">
                                 <button type="submit"><i class="lni lni-search-alt"></i></button>
                             </form>
                         </section>
@@ -34,13 +34,13 @@
                             <h3>Service Category</h3>
                             <ul>
                               <li>
-                                  <a href="/pelayanan-kami">
+                                  <a href="/services">
                                       All Services <i class="lni lni-arrow-right"></i>
                                   </a>
                               </li>
                               @foreach($services[0]['allServices'] as $serv)
                                 <li>
-                                    <a href="/pelayanan/{{$serv -> name}}?idserv={{$serv -> id}}">
+                                    <a href="/service/{{$serv -> name}}?idserv={{$serv -> id}}">
                                         {{$serv -> name}} <i class="lni lni-arrow-right"></i>
                                     </a>
                                 </li>

@@ -1,4 +1,4 @@
- $(window).on('load', function() {
+$(window).on('load', function() {
   const gligh = GLightbox({
     selector: '.glightbox3',
     plyr: {

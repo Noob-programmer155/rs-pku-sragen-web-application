@@ -38,14 +38,23 @@
                             @for ($h = $i * 9; $h < $services['count_item']; $h++)
                                 @if($h < ($i+1) * 9)
                                     <div class="col-lg-4 col-md-6 col-12 p-0">
-                                        <div class="single-list custom-border-right wow fadeInUp m-0"
-                                            data-wow-delay=".2s">
-                                            <img class="shape1" src="/images/service/shape1.svg" alt="#">
-                                            <img class="shape2" src="/images/service/shape2.svg" alt="#">
-                                            <i class="lni {{$services['data'][$h] -> icon}}"></i>
-                                            <h4><a href="/pelayanan/{{$services['data'][$h] -> name}}?idserv={{$services['data'][$h] -> id}}">{{$services['data'][$h] -> name}}</a></h4>
-                                            <p>{{$services['data'][$h] -> description_title}}</p>
-                                        </div>
+                                        <a href="/service/{{$services['data'][$h] -> name}}?idserv={{$services['data'][$h] -> id}}">
+                                            <div class="custom-border-right single-list wow fadeInUp"
+                                                data-wow-delay=".2s">
+                                                <img class="shape1" src="/images/service/shape1.svg" alt="#">
+                                                <img class="shape2" src="/images/service/shape2.svg" alt="#">
+                                                <div class="icon-title">
+                                                  <i class="lni {{$services['data'][$h] -> icon}}"></i>
+                                                  <div>
+                                                      <h4>Rating</h4>
+                                                      <pre><i class="lni lni-star-filled"></i>{{$services['data'][$h] -> score}}/<span>4.0</span></pre>
+                                                      <span><i class="lni lni-user"></i>{{$services['data'][$h] -> count}}</span>
+                                                  </div>
+                                                </div>
+                                                <h4>{{$services['data'][$h] -> name}}</h4>
+                                                <p>{{$services['data'][$h] -> description_title}}</p>
+                                            </div>
+                                        </a>
                                     </div>
                                 @endif
                             @endfor

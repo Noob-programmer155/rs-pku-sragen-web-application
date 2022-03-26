@@ -14,5 +14,5 @@ class blog extends Model
     //public $incrementing = true;
     public $timestamps = false;
 
-    protected $fillable = ['title','description','doctor','dates_upload','views'];
+    protected $fillable = ['title','description','doctor','dates_upload','views','image_home'];
 }

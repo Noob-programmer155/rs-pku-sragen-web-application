@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\{HomeController,AppointmentController,
-  AboutusController,ProjectsController};
+  AboutusController,ProjectsController,DoctorController,BlogController};
 use App\Http\Controllers\Department\Service\ServiceController;
 use App\Http\Controllers\Department\DepartmentController;
 
@@ -18,44 +18,49 @@ use App\Http\Controllers\Department\DepartmentController;
 |
 */
 
-Route::get('/',[HomeController::class,'home']);
 
-Route::get('/login',[HomeController::class,'login']);
-Route::post('/login',[HomeController::class,'login_post']);
+Route::group(['middleware' => ['web']],function (){
+  Route::get('/',[HomeController::class,'home']);
 
-Route::get('/lost-password',[HomeController::class,'login']);
-// Route::get('/lost-password',[HomeController::class,'login']);
+  Route::get('/login',[HomeController::class,'login']);
+  Route::post('/login',[HomeController::class,'login_post']);
 
-Route::get('/signup',[HomeController::class,'signIn']);
-Route::post('/signup',[HomeController::class,'signIn_post']);
+  Route::get('/lost/password',[HomeController::class,'login']);
+  // Route::get('/lost-password',[HomeController::class,'login']);
 
-Route::get('/pelayanan/{name}',[ServiceController::class,'getService']);
+  Route::get('/signup',[HomeController::class,'signIn']);
+  Route::post('/post/signup',[HomeController::class,'signIn_post']);
 
-Route::get('/pelayanan-kami',[ServiceController::class,'getAllService']);
+  Route::get('/service/{name}',[ServiceController::class,'getService']);
 
-Route::get('/jam-kerja',[HomeController::class,'signIn']);
+  Route::get('/services',[ServiceController::class,'getAllService']);
 
-Route::get('/departemen-kami',[DepartmentController::class,'getAllDepartment']);
+  Route::get('/departments',[DepartmentController::class,'getAllDepartment']);
 
-Route::get('/departemen/{name}',[DepartmentController::class,'getDepartment']);
+  Route::get('/department/{name}',[DepartmentController::class,'getDepartment']);
 
-Route::get('/proyek/{name}',[ProjectsController::class,'getProject']);
+  Route::get('/project/{name}',[ProjectsController::class,'getProject']);
 
-Route::get('/proyek-kami',[ProjectsController::class,'getAllProject']);
+  Route::get('/projects',[ProjectsController::class,'getAllProject']);
 
-Route::get('/dokter-kami',[HomeController::class,'signIn']);
+  Route::get('/doctors',[DoctorController::class,'getDoctorAll']);
 
-Route::get('/dokter/{name}',[HomeController::class,'signIn']);
+  Route::get('/doctor/{name}',[DoctorController::class,'getDoctor']);
 
-Route::get('/tentang-kami',[AboutusController::class,'aboutUs']);
+  Route::get('/about',[AboutusController::class,'aboutUs']);
 
-Route::get('/blog-kami',[HomeController::class,'signIn']);
+  Route::get('/blogs',[BlogController::class,'getBlogAll']);
+  Route::get('/blog/item/{startDate}/{endDate}',[BlogController::class,'getDataBlog']);
+  Route::get('/search/item',[BlogController::class,'getBlogInAll']);
+  Route::get('/sugestion/search',[BlogController::class,'getItemDynamic']);
 
-Route::get('/blog/{name}',[HomeController::class,'signIn']);
+  Route::get('/blog/{name}',[BlogController::class,'getBlog']);
+  Route::get('/blog/comments/{id}',[BlogController::class,'getBlogComments']);
+  Route::post('/blog/comments/post',[BlogController::class,'postBlogComment']);
 
-Route::get('/kontak',[HomeController::class,'signIn']);
+  Route::get('/contact',[HomeController::class,'ContactUs']);
 
-Route::get('/Tabel-jam-kerja',[HomeController::class,'signIn']);
+  Route::get('/table-workhours',[DoctorController::class,'doctorsTableWorking']);
 
-Route::get('/buat-janji-temu',[AppointmentController::class,'getAppointment']);
-Route::post('/get-janji-temu',[AppointmentController::class,'postAppointment']);
+  Route::get('/appointment',[HomeController::class,'appointmentView']);
+});

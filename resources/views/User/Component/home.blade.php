@@ -12,8 +12,8 @@
                                     <h2 class="wow fadeInLeft" data-wow-delay=".3s">{{$carousel -> title}}</h2>
                                     <p class="wow fadeInLeft" data-wow-delay=".5s">{{$carousel -> description}}</p>
                                     <div class="button wow fadeInLeft" data-wow-delay=".7s">
-                                        <a href="/buat-janji-temu" class="btn">Book Appointment</a>
-                                        <a href="/tentang-kami" class="btn alt">About Us</a>
+                                        <a href="/appointment" class="btn">Book Appointment</a>
+                                        <a href="/about" class="btn alt">About Us</a>
                                     </div>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@
     <div class="container">
         <div class="appointment-form">
             <div class="row">
-                <div class="col-lg-6 col-12">
+                <div class="col-xl-6 col-12">
                     <div class="appointment-title">
                         <span>Appointment</span>
                         <h2>Book An Appointment</h2>
@@ -48,7 +48,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-12 custom-padding">
                     <div class="appointment-btn button">
-                        <a class="btn" href="/buat-janji-temu">Get Appointment</a>
+                        <a class="btn" href="/appointment">Get Appointment</a>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                       <!-- view raw description  -->
                       <!-- {{$about['description']}} -->
                       <div class="button">
-                          <a href="/tentang-kami" class="btn">More About Us</a>
+                          <a href="/about" class="btn">More About Us</a>
                       </div>
                     @endforeach
                 </div>
@@ -114,7 +114,9 @@
                                 <div class="row align-items-center">
                                     <div class="col-lg-6 col-md-12 col-12">
                                         <div class="image w-100">
-                                            <img src="/images/departments/{{$department[$i][0] -> image}}" alt="{{$department[$i][0] -> name}}">
+                                            <a href="/department/{{$department[$i][0] -> name}}?iddep={{$department[$i][0] -> id}}">
+                                                <img src="/images/departments/{{$department[$i][0] -> image}}" alt="{{$department[$i][0] -> name}}">
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-12">
@@ -148,7 +150,7 @@
                                                 </div>
                                                 <div style="flex-grow:1;"></div>
                                                 <div class="button">
-                                                    <a href="/departemen/{{$department[$i][0] -> name}}?iddep={{$department[$i][0] -> id}}"
+                                                    <a href="/department/{{$department[$i][0] -> name}}?iddep={{$department[$i][0] -> id}}"
                                                       class="btn" style="text-align:center;">View Speciality</a>
                                                 </div>
                                             </div>
@@ -162,7 +164,7 @@
             </div>
         </div>
         <div class="row">
-            <a href="/departemen-kami"> >>> View More</a>
+            <a href="/departments"> >>> View More</a>
         </div>
     </div>
 </section>
@@ -184,15 +186,24 @@
                 <div class="services-content">
                     <div class="row pl-4 pr-4 justify-content-center">
                         @foreach($service as $serv)
-                          <div class="col-lg-4 col-md-6 col-12 p-0">
-                              <div class="single-list custom-border-right wow fadeInUp m-0"
-                                  data-wow-delay=".2s">
-                                  <img class="shape1" src="/images/service/shape1.svg" alt="#">
-                                  <img class="shape2" src="/images/service/shape2.svg" alt="#">
-                                  <i class="lni {{$serv -> icon}}"></i>
-                                  <h4><a href="/pelayanan/{{$serv -> name}}?idserv={{$serv -> id}}">{{$serv -> name}}</a></h4>
-                                  <p>{{$serv -> description_title}}</p>
-                              </div>
+                          <div class="col-lg-4 col-md-6 col-12">
+                              <a href="/service/{{$serv -> name}}?idserv={{$serv -> id}}">
+                                  <div class="single-list custom-border-right wow fadeInUp"
+                                      data-wow-delay=".2s">
+                                      <img class="shape1" src="/images/service/shape1.svg" alt="#">
+                                      <img class="shape2" src="/images/service/shape2.svg" alt="#">
+                                      <div class="icon-title">
+                                          <i class="lni {{$serv -> icon}}"></i>
+                                          <div>
+                                              <h4>Rating</h4>
+                                              <pre><i class="lni lni-star-filled"></i>{{$serv -> score}}/<span>4.0</span></pre>
+                                              <span><i class="lni lni-user"></i>{{$serv -> count}}</span>
+                                          </div>
+                                      </div>
+                                      <h4>{{$serv -> name}}</h4>
+                                      <p>{{$serv -> description_title}}</p>
+                                  </div>
+                              </a>
                           </div>
                         @endforeach
                     </div>
@@ -200,7 +211,7 @@
             </div>
         </div>
         <div class="row">
-            <a href="/pelayanan-kami"> >>> View More</a>
+            <a href="/services"> >>> View More</a>
         </div>
     </div>
 </section>
@@ -267,13 +278,18 @@
                 <div class="col-lg-4 col-md-6 grid-item-proj {{$proj -> name}}">
                     <div class="portfolio-item-wrapper">
                         <div class="portfolio-img">
-                            <img src="/images/portfolio/{{$proj -> image_init}}" alt="{{$proj -> title}}">
+                            <img src="/images/project/{{$proj -> image_init}}" alt="{{$proj -> title}}">
                         </div>
                         <div class="portfolio-overlay">
                             <div class="pf-content">
-                                <a href="/proyek/{{$proj -> title}}?idproj={{$proj -> id}}" class="detail-btn"><i class="lni lni-link"></i></a>
                                 <span class="category">{{$proj -> name}}</span>
-                                <h4><a href="/proyek/{{$proj -> title}}?idproj={{$proj -> id}}">{{$proj -> title}}</a></h4>
+                                <h4>{{$proj -> title}}</h4>
+                                <a href="/project/{{$proj -> title}}?idproj={{$proj -> id}}">
+                                    <div>
+                                        <i class="lni lni-link"></i>
+                                        <q>klik disini untuk melihat</q>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -281,7 +297,7 @@
             @endforeach
         </div>
         <div>
-            <a href="/proyek-kami"> >>> View More</a>
+            <a href="/projects"> >>> View More</a>
         </div>
     </div>
 </section>
@@ -310,7 +326,7 @@
                             <p>{{$response_Patient -> description}}</p>
                         </div>
                         <div class="author">
-                            <img src="/images/testimonial/{{$response_Patient -> image}}" alt="{{$response_Patient -> name}}">
+                            <img src="/images/user/patient/{{$response_Patient -> image}}" alt="{{$response_Patient -> name}}">
                             <h4 class="name">
                                 {{$response_Patient -> name}}
                                 <span class="deg">{{$response_Patient -> patient_type}}</span>
@@ -340,7 +356,9 @@
                 <div class="col-lg-3 col-md-6 col-12">
                     <div class="single-doctor wow fadeInUp" data-wow-delay=".2s">
                         <div class="image">
-                            <img src="/images/doctors/{{$doctor[0] -> image}}" alt="#">
+                            <a href="/doctor/{{$doctor[0] -> username}}?iddoc={{$doctor[0] -> id}}">
+                                <img src="/images/doctors/{{$doctor[0] -> image}}" alt="#">
+                            </a>
                             <ul class="social">
                                 @foreach($doctor[1] as $social)
                                     <li><a href="{{$social -> link}}"><i class="lni lni-{{$social -> social}}"></i></a></li>
@@ -348,15 +366,17 @@
                             </ul>
                         </div>
                         <div class="content">
-                            <h5>{{$doctor[0] -> profession}}</h5>
-                            <h3><a href="/dokter/{{$doctor[0] -> username}}?iddoc={{$doctor[0] -> id}}">{{$doctor[0] -> username}}</a></h3>
+                            <a href="/doctor/{{$doctor[0] -> username}}?iddoc={{$doctor[0] -> id}}">
+                                <h5>{{$doctor[0] -> profession}}</h5>
+                                <h3>{{$doctor[0] -> username}}</h3>
+                            </a>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
-        <div class="row">
-            <a href="/dokter-kami"> >>> View More</a>
+        <div class="row link">
+            <a href="/doctors"> >>> View More</a>
         </div>
     </div>
 </section>
@@ -423,26 +443,25 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="image">
-                                    <a href="/blog/{{$blog[0] -> title}}?idbl={{$blog[0] -> id}}"><img src="/images/blog/{{$blog[1][0] -> media}}"
-                                            alt="{{$blog[0] -> title}}"></a>
+                                    <a href="/blog/{{$blog -> title}}?idbl={{$blog -> id}}"><img src="/images/blog/{{$blog -> image}}"
+                                            alt="{{$blog -> title}}"></a>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="content">
-                                    <h2 class="title"><a href="/blog/{{$blog[0] -> title}}?idbl={{$blog[0] -> id}}">{{$blog[0] -> title}}</a></h2>
-                                    <div class="description">{!! $blog[0] -> description !!}</div>
+                                    <h2 class="title"><a href="/blog/{{$blog -> title}}?idbl={{$blog -> id}}">{{$blog -> title}}</a></h2>
+                                    <div class="description">{!! $blog -> description !!}</div>
                                     <ul class="meta-info">
                                         <li>
-                                            <a href="/dokter/{{$blog[0] -> doc_username}}?iddoc={{$blog[0] -> doc_id}}">
-                                              <img src="/images/doctors/{{$blog[0] -> doc_image}}" alt="{{$blog[0] -> doc_username}}">
-                                              {{$blog[0] -> doc_username}}</a>
+                                            <a href="/doctor/{{$blog -> doc_username}}?iddoc={{$blog -> doc_id}}">
+                                              <img src="/images/doctors/{{$blog -> doc_image}}" alt="{{$blog -> doc_username}}">
+                                              {{$blog -> doc_username}}</a>
                                         </li>
                                         <li>
-                                            <span style="color:#fff">{{$blog[0] -> date}}</span>
+                                            <span style="color:#fff">{{$blog -> date}}</span>
                                         </li>
                                         <li>
-                                            <i class="lni lni-eye" style="color:#fff"></i>
-                                            <span style="color:#fff">{{$blog[0] -> views}}</span>
+                                            <i class="lni lni-eye" style="color:#fff"></i><span style="color:#fff">{{$blog -> views}}</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -458,26 +477,25 @@
                           <div class="row">
                               <div class="col-lg-5 col-md-5 col-12 pr-0" style="display:flex;">
                                   <div class="image">
-                                      <a href="/blog/{{$blog[0] -> title}}?idbl={{$blog[0] -> id}}"><img src="/images/blog/{{$blog[1][0] -> media}}"
-                                              alt="{{$blog[0] -> title}}"></a>
+                                      <a href="/blog/{{$blog -> title}}?idbl={{$blog -> id}}"><img src="/images/blog/{{$blog -> image}}"
+                                              alt="{{$blog -> title}}"></a>
                                   </div>
                               </div>
                               <div class="col-lg-7 col-md-7 col-12 pl-0" style="display:flex;">
                                   <div class="content">
-                                      <h2 class="title"><a href="/blog/{{$blog[0] -> title}}?idbl={{$blog[0] -> id}}">{{$blog[0] -> title}}</a></h2>
-                                      <div class="description">{!! $blog[0] -> description !!}</div>
+                                      <h2 class="title"><a href="/blog/{{$blog -> title}}?idbl={{$blog -> id}}">{{$blog -> title}}</a></h2>
+                                      <div class="description">{!! $blog -> description !!}</div>
                                       <ul class="meta-info">
                                           <li>
-                                              <a href="/dokter/{{$blog[0] -> doc_username}}?iddoc={{$blog[0] -> doc_id}}">
-                                                <img src="/images/doctors/{{$blog[0] -> doc_image}}" alt="#">
-                                                {{$blog[0] -> doc_username}}</a>
+                                              <a href="/doctor/{{$blog -> doc_username}}?iddoc={{$blog -> doc_id}}">
+                                                <img src="/images/doctors/{{$blog -> doc_image}}" alt="#">
+                                                {{$blog -> doc_username}}</a>
                                           </li>
                                           <li>
-                                              <span>{{$blog[0] -> date}}</span>
+                                              <span>{{$blog -> date}}</span>
                                           </li>
                                           <li>
-                                              <i class="lni lni-eye"></i>
-                                              <span>{{$blog[0] -> views}}</span>
+                                              <i class="lni lni-eye"></i><span>{{$blog -> views}}</span>
                                           </li>
                                       </ul>
                                   </div>
@@ -489,7 +507,7 @@
             </div>
         </div>
         <div class="row">
-            <a href="/blog-kami"> >>> View More</a>
+            <a href="/blogs"> >>> View More</a>
         </div>
     </div>
 </section>

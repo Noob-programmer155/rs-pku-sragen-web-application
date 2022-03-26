@@ -183,6 +183,87 @@ i,button{
   transform: scale(1.4);
 }
 
+.portfolio-details .image{
+  display: block;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .image h4{
+  font-size: 2rem;
+  margin: 40px 0 40px 0;
+}
+
+.portfolio-details .image .container-image{
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-details .image button{
+  position: relative;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  height: 100%;
+  transition: all .5s;
+}
+
+.portfolio-details .image button:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+  top: -10px;
+}
+
+.portfolio-details .image button .reverse{
+  transform: rotate(var(--rotate));
+  -webkit-transform: rotate(var(--rotate));
+  fill: #404040;
+  transition: all .5s;
+}
+
+.portfolio-details .image button:hover .reverse{
+  fill: #fff;
+}
+
+.portfolio-details .image .item-image-container-root{
+  display: flex;
+  min-width: 9rem;
+  max-width: 9rem;
+  align-items: center;
+  overflow: hidden;
+}
+
+.portfolio-details .image .item-image-container{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-details .image .container-image .item-image-container .item-image {
+  max-width: 9rem;
+  min-width: 9rem;
+  overflow: hidden;
+}
+
+.portfolio-details .image .container-image .item-image-container .item-image img{
+  width: 9rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0px;
+  transition: all .5s;
+}
+
+.portfolio-details .image .container-image .item-image-container .item-image a{
+  background-color: transparent;
+}
+
+.portfolio-details .image .container-image .item-image-container .item-image a:hover{
+  z-index: 99;
+}
+
+.portfolio-details .image .container-image .item-image-container .item-image a:hover img{
+  box-shadow: 0 10px 50px -10px #000000;
+  transform: scale(1.4);
+}
+
 .services .services-content .pagination-service{
   display: flex;
   justify-content: center;
@@ -201,14 +282,221 @@ i,button{
   background: #0099ff;
 }
 
+.doctor-section{
+  display: flex;
+  justify-content: center;
+}
+
+.doctor-section .doctor-btn-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.doctor-section .doctor-btn-wrapper h4{
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.doctor-section .doctor-btn-wrapper .doctor-btn{
+  display: flex;
+  align-items: center;
+  color: #001a66;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 13px;
+  border: 2px solid #002db3;
+  background-color: transparent;
+  transition: all .5s;
+}
+
+.doctor-section .doctor-btn-wrapper .doctor-btn:hover {
+  color: #fff;
+  border: 2px solid #0099cc;
+  background-color: #0099cc;
+}
+
+.doctor-section .doctor-btn-wrapper .doctor-btn:hover i {
+  color: #fff;
+}
+
+.doctor-section .doctor-btn-wrapper .doctor-btn.active {
+  color: #fff;
+  border: 2px solid #0099cc;
+  background-color: #0099cc;
+}
+
+.doctor-section .doctor-btn-wrapper .doctor-btn.active i {
+  color: #fff;
+}
+
+.doctor-section .doctor-btn-wrapper .doctor-btn:first-child{
+  margin-right: 40px;
+  margin-bottom: 0;
+}
+
+.doctor-section .doctor-btn-wrapper .doctor-btn:last-child{
+  margin-right: 0;
+  margin-bottom: 13px;
+}
+
+.doctor-section .doctor-btn-wrapper .doctor-btn i{
+  display: flex;
+  color: #001a66;
+  font-size: 1.3rem;
+  margin-left: 5px;
+  transition: color .5s;
+}
+
+.doctor-section .grid-doc .grid-item-doc {
+  border-radius: 10px;
+  padding: 0;
+  border: none;
+  padding: 0 10px 15px 10px;
+}
+
+.doctor-section .grid-doc .grid-item-doc .single-doctor .image {
+  max-width: inherit;
+  width: inherit;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.doctor-section .grid-doc .grid-item-doc .single-doctor .image img{
+  width: 100%;
+  transition: all .5s;
+  object-fit: cover;
+  object-position: center;
+  transition: all .5s;
+}
+
+.doctor-section .grid-doc .grid-item-doc a:hover .single-doctor .image img{
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+}
+
+.doctor-section .grid-doc .grid-item-doc .single-doctor .content{
+  display: flex;
+  padding-top: 2rem;
+  background-color: #fafafa;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #eee;
+  padding-bottom: 2rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.doctor-section .grid-doc .grid-item-doc .single-doctor .content h5{
+  font-size: 1rem;
+  font-weight: 500;
+  color: #009900;
+  font-family: merriweather,open-sans;
+}
+
+.doctor-section .grid-doc .grid-item-doc .single-doctor .content h3{
+  margin-top: .5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0099ff;
+  font-family: merriweather,open-sans;
+}
+
+.container-blog-items{
+  margin: 30px 0;
+}
+
+.search-container-blog{
+  display: flex;
+}
+
+.search-container-blog div {
+  display: flex;
+  width: 100%;
+  border: 2px solid #b3b3b3;
+  border-radius: 1.7rem;
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 11;
+  transition: all .5s;
+}
+
+.search-container-blog div input[type='text'] {
+  padding: 10px 1rem;
+  width: 100%;
+  font-size: 1rem;
+  border: NONE;
+  color: #8c8c8c;
+  background-color: transparent;
+  border-radius: 15px;
+}
+
+.search-container-blog div button {
+  padding: 10px;
+  padding-right: 1rem;
+  color: #404040;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: NONE;
+  border-radius: 15px;
+}
+
+.search-item-container{
+  position: absolute;
+  z-index: 10;
+  display: none;
+  border-radius: 0 0 1rem 1rem;
+  background-color: #fff;
+  color: black;
+  max-height: 40vh;
+  overflow: auto;
+  box-shadow: 0px 0px 50px -20px #000000;
+}
+
+.search-item-container .search-item-subcontainer span{
+  text-align: left;
+  padding: .5rem;
+}
+
+.search-item-container .search-item-subcontainer a{
+  text-align: left;
+  padding: .5rem;
+  font-size: 1rem;
+  transition: all .5s;
+}
+
+.search-item-container .search-item-subcontainer a:hover{
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #33ccff;
+  cursor: default;
+}
+
+.search-item-container.active{
+  display: block;
+}
+
 @media only screen and (min-width:650px){
+  .doctor-section .doctor-btn-wrapper {
+    width: 100%;
+  }
   .service-details .image .item-image-container-root{
+    max-width: calc(3 * 9rem);
+  }
+  .portfolio-details .image .item-image-container-root{
     max-width: calc(3 * 9rem);
   }
 }
 
 @media only screen and (min-width:900px){
   .service-details .image .item-image-container-root{
+    max-width: calc(5 * 9rem);
+  }
+  .portfolio-details .image .item-image-container-root{
     max-width: calc(5 * 9rem);
   }
 }

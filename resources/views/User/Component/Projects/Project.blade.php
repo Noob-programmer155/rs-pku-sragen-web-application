@@ -9,7 +9,7 @@
                 </div>
                 <ul class="breadcrumb-nav">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/proyek-kami">Projects</a></li>
+                    <li><a href="/projects">Projects</a></li>
                     <li>{{$projects[0]['data'] -> title}}</li>
                 </ul>
             </div>
@@ -21,109 +21,102 @@
     <div class="container">
         <div class="content">
             <div class="row">
-                <div class="col-lg-8 col-md-12 col-12">
-                    <div class="details-content">
+                <article class="col-lg-8 col-md-12 col-12">
+                    <section class="details-content">
                         <div class="thumb">
-                            <img src="assets/images/portfolio/portfolio-detail-img.jpg" alt="#">
+                            <img src="/images/project/{{$projects[0]['images'][0] -> media}}" alt="$projects[0]['data'] -> title">
                         </div>
-                        <h3 class="title">About this Test</h3>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                            piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard
-                            McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of
-                            the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through
-                            the cites of the word in classical literature, discovered the undoubtable source. Lorem
-                            Ipsum comes from sections 1.10.32 and 1.10.33 of “de Finibus Bonorum et Malorum” (The
-                            Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the
-                            theory of ethics,</p>
-                        <h4 class="sub-title">Significance and Impact</h4>
-                        <p>Languages realizes why a new common language would be desirable: one could refuse to pay
-                            expensive translators. To achieve this, it would be necessary to have uniform grammar,
-                            pronunciation and more common words. If several languages coalesce, the grammar of the
-                            resulting. would be desirable.</p>
-                        <div class="image-block">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <img src="assets/images/portfolio/pf1.jpg" alt="#">
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <img src="assets/images/portfolio/pf4.jpg" alt="#">
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="sub-title">Result For The Blood Test</h4>
-                        <p>Sed ut perspiciatis undeomnis iste natus error sit voluptatem accusantium dolore Totam
-                            rem
-                            aperiam with a long list of products and never ending customer support.</p>
-                        <ul class="list">
-                            <li><i class="lni lni-checkmark"></i> Cerebrovascular disease, such as stroke</li>
-                            <li><i class="lni lni-checkmark"></i> Demyelinating diseases of the central nervous
-                                system,
-                                such as multiple sclerosis
-                            </li>
-                            <li><i class="lni lni-checkmark"></i> Headache disorders
-                            </li>
-                            <li><i class="lni lni-checkmark"></i> Infections of the brain and peripheral nervous
-                                system
-                            </li>
-                            <li><i class="lni lni-checkmark"></i> Movement disorders, such as Parkinson's disease
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-12">
+                        <h3 class="title">About this Project</h3>
+                        <span>Title Project <h5>{{$projects[0]['data'] -> title}}</h5></span>
+                        {!! $projects[0]['data'] -> description !!}
+                    </section>
+                </article>
+                <aside class="col-lg-4 col-md-12 col-12">
                     <div class="portfolio-sidebar">
-                        <div class="single-widget researcher-details">
+                        <section class="single-widget researcher-details">
                             <h3>About Researcher</h3>
                             <div class="author-box">
-                                <img src="assets/images/portfolio/researcher-img.jpg" alt="author">
-                                <h6>Dr.Alice Williams</h6>
-                                <p class="fw-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                    eiusmod tempor
-                                    incididunt ut labore.</p>
+                                <div class="container-img">
+                                  <a href="/doctor/{{$projects[0]['data'] -> researcher -> username}}?iddoc={{$projects[0]['data'] -> researcher -> id}}"><img src="/images/doctors/{{$projects[0]['data'] -> researcher -> image}}"
+                                    alt="{{$projects[0]['data'] -> researcher -> username}}"></a>
+                                </div>
+                                <h6><a href="/doctor/{{$projects[0]['data'] -> researcher -> username}}?iddoc={{$projects[0]['data'] -> researcher -> id}}">{{$projects[0]['data'] -> researcher -> username}}</a></h6>
+                                <p class="fw-500">{{$projects[0]['data'] -> researcher -> wise_words}}</p>
                                 <ul class="social">
-                                    <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a>
-                                    </li>
-                                    <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a>
-                                    </li>
-                                    <li><a href="javascript:void(0)"><i class="lni lni-instagram-filled"></i></a>
-                                    </li>
-                                    <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a>
-                                    </li>
-                                    <li><a href="javascript:void(0)"><i class="lni lni-youtube"></i></a></li>
+                                  @foreach($projects[0]['socials'] as $socials)
+                                    <li><a href="{{$socials -> link}}"><i class="lni lni-{{$socials -> social}}"></i></a></li>
+                                  @endforeach
                                 </ul>
                             </div>
-                        </div>
-                        <div class="single-widget">
+                        </section>
+                        <section class="single-widget">
                             <h3>Research Details</h3>
-                            <ul class="list-info">
-                                <li>
-                                    <i class="lni lni-files"></i>
-                                    <span>Researcher Name :</span> Dr.Alice Williams
-                                </li>
-                                <li>
-                                    <i class="lni lni-user"></i>
-                                    <span>Client :</span> Mononucleosis Test
-                                </li>
-                                <li>
-                                    <i class="lni lni-pencil-alt"></i>
-                                    <span>Category : </span> Vulputate Cursus
-                                </li>
-                                <li>
-                                    <i class="lni lni-calendar"></i>
-                                    <span>Research Year :</span> 2023
-                                </li>
-                                <li>
-                                    <i class="lni lni-map-marker"></i>
-                                    <span>Location : </span> Bulls Stadium, Califorina
-                                </li>
-                                <li>
-                                    <i class="lni lni-checkmark-circle"></i>
-                                    <span>Delivery Mode : </span> Stipulated Price
-                                </li>
-                            </ul>
-                        </div>
+                            <table class="list-info">
+                              <tbody>
+                                <tr>
+                                  <td><i class="lni lni-files"></i></td>
+                                  <td><span>Research Title :</span> {{$projects[0]['data'] -> researcher -> resTitle}}</td>
+                                </tr>
+                                <tr>
+                                  <td><i class="lni lni-user"></i></td>
+                                  <td><span>Researcher Name :</span> {{$projects[0]['data'] -> researcher -> username}}</td>
+                                </tr>
+                                <tr>
+                                  <td><i class="lni lni-users"></i><td>
+                                  <td><span>Client :</span> {{$projects[0]['data'] -> researcher -> resClient}}</td>
+                                </tr>
+                                <tr>
+                                  <td><i class="lni lni-pencil-alt"></i></td>
+                                  <td><span>Category : </span> {{$projects[0]['data'] -> researcher -> resCategory}}</td>
+                                </tr>
+                                <tr>
+                                  <td><i class="lni lni-calendar"></i></td>
+                                  <td><span>Research Year :</span> {{$projects[0]['data'] -> researcher -> resDate}}</td>
+                                </tr>
+                                <tr>
+                                  <td><i class="lni lni-map-marker"></i></td>
+                                  <td><span>Location : </span> {{$projects[0]['data'] -> researcher -> resLocation}}</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </section>
                     </div>
-                </div>
+                </aside>
+                <section class="container image pt-1">
+                  <div class="row">
+                    <h4>Gallery</h4>
+                    <div class="container-image">
+                      <button id="department-detail-images-prev-btn">
+                        <svg
+                        class="reverse"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="4rem"
+                        viewBox="0 50 400 250"
+                        width="4rem"
+                        style="--rotate:-90deg"><path d="M 50 300 L 350 300 Q 400 300 400 250 L 200 50 L 0 250 Q 0 300 50 300 L 350 300 "/></svg>
+                      </button>
+                      <div class="item-image-container-root">
+                        <div id="item-image-department-detail-container" class="item-image-container">
+                          @for($i=0;$i < count($projects[0]['images']);$i++)
+                            <div class="item-image">
+                              <a href="/images/project/{{$projects[0]['images'][$i] -> media}}" class="glightbox3">
+                                <img src="/images/project/{{$projects[0]['images'][$i] -> media}}" alt="{{$projects[0]['data'] -> title}}">
+                              </a>
+                            </div>
+                          @endfor
+                        </div>
+                      </div>
+                      <button id="department-detail-images-next-btn"><svg
+                        class="reverse"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="4rem"
+                        viewBox="0 50 400 250"
+                        width="4rem"
+                        style="--rotate:90deg"><path d="M 50 300 L 350 300 Q 400 300 400 250 L 200 50 L 0 250 Q 0 300 50 300 L 350 300 "/></svg>
+                      </button>
+                    </div>
+                  </div>
+                </section>
             </div>
         </div>
     </div>

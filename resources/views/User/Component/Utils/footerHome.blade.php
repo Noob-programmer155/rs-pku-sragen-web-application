@@ -39,7 +39,7 @@
 
                     <div class="single-footer f-about">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="/">
                                 <img src="/images/logo/white-logo.svg" alt="#">
                             </a>
                         </div>
@@ -58,19 +58,19 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12">
                                 <ul>
-                                    <li><a href="/tentang-kami">About</a></li>
-                                    <li><a href="/dokter-kami">Team</a></li>
-                                    <li><a href="/departemen-kami">department</a></li>
+                                    <li><a href="/about">About</a></li>
+                                    <li><a href="/doctors">Team</a></li>
+                                    <li><a href="/departments">department</a></li>
                                     <li><a href="#">Cost Calculator</a></li>
-                                    <li><a href="/Tabel-jam-kerja">Working Hours</a></li>
+                                    <li><a href="/table-workhours">Working Hours</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">
                                 <ul>
-                                    <li><a href="/buat-janji-temu">Appointment</a></li>
-                                    <li><a href="/blog-kami">Blogs</a></li>
-                                    <li><a href="/pelayanan-kami">services</a></li>
-                                    <li><a href="/kontak">Contact Us</a></li>
+                                    <li><a href="/appointment">Appointment</a></li>
+                                    <li><a href="/blogs">Blogs</a></li>
+                                    <li><a href="/services">services</a></li>
+                                    <li><a href="/contact">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -81,22 +81,17 @@
                     <div class="single-footer opening-hours">
                         <h3>Opening Hours</h3>
                         <ul>
-                            <li>
-                                <span class="day"><i class="lni lni-timer"></i> Mon - Tue</span>
-                                <span class="time">08:30 - 18:30</span>
-                            </li>
-                            <li>
-                                <span class="day"><i class="lni lni-timer"></i> Wed- Thu</span>
-                                <span class="time">08:30 - 18:30</span>
-                            </li>
-                            <li>
-                                <span class="day"><i class="lni lni-timer"></i> Friday</span>
-                                <span class="time">08:30 - 18:30</span>
-                            </li>
-                            <li>
-                                <span class="day"><i class="lni lni-timer"></i> Saturday</span>
-                                <span class="time">08:30 - 18:30</span>
-                            </li>
+                            @foreach($time_works as $time)
+                              @php
+                                $times = explode(',',$time -> description);
+                                $time -> day = $times[0];
+                                $time -> time = $times[1];
+                              @endphp
+                                <li>
+                                    <span class="day"><i class="lni lni-timer"></i> {{$time -> day}}</span>
+                                    <span class="time">{{$time -> time}}</span>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
 
@@ -130,7 +125,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="content align-center">
-                            <p class="copyright-text">Designed and Developed by AFSD Team</a>
+                            <p class="copyright-text">Designed and Developed by <a>AFSD Team</a>
                             </p>
                         </div>
                     </div>

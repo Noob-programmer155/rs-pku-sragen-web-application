@@ -90,25 +90,27 @@
         <div class="row">
             @foreach($our_doctors as $doctor)
                 <div class="col-lg-3 col-md-6 col-12">
-                    <div class="single-doctor wow fadeInUp" data-wow-delay=".2s">
-                        <div class="image">
-                            <img src="/images/doctors/{{$doctor[0] -> image}}" alt="#">
-                            <ul class="social">
-                                @foreach($doctor[1] as $social)
-                                    <li><a href="{{$social -> link}}"><i class="lni lni-{{$social -> social}}"></i></a></li>
-                                @endforeach
-                            </ul>
+                    <a href="/doctor/{{$doctor[0] -> username}}?iddoc={{$doctor[0] -> id}}">
+                        <div class="single-doctor wow fadeInUp" data-wow-delay=".2s">
+                            <div class="image">
+                                <img src="/images/doctors/{{$doctor[0] -> image}}" alt="#">
+                                <ul class="social">
+                                    @foreach($doctor[1] as $social)
+                                        <li><a href="{{$social -> link}}"><i class="lni lni-{{$social -> social}}"></i></a></li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            <div class="content">
+                                <h5>{{$doctor[0] -> profession}}</h5>
+                                <a href="/doctor/{{$doctor[0] -> username}}?iddoc={{$doctor[0] -> id}}"><h3>{{$doctor[0] -> username}}</h3></a>
+                            </div>
                         </div>
-                        <div class="content">
-                            <h5>{{$doctor[0] -> profession}}</h5>
-                            <h3><a href="/dokter/{{$doctor[0] -> username}}?iddoc={{$doctor[0] -> id}}">{{$doctor[0] -> username}}</a></h3>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             @endforeach
         </div>
         <div class="row">
-            <a href="/dokter-kami"> >>> View More</a>
+            <a class="view" href="/doctors"> >>> View More</a>
         </div>
     </div>
 </section>
@@ -137,7 +139,7 @@
                             <p>{{$response_Patient -> description}}</p>
                         </div>
                         <div class="author">
-                            <img src="/images/testimonial/{{$response_Patient -> image}}" alt="{{$response_Patient -> name}}">
+                            <img src="/images/user/patient/{{$response_Patient -> image}}" alt="{{$response_Patient -> name}}">
                             <h4 class="name">
                                 {{$response_Patient -> name}}
                                 <span class="deg">{{$response_Patient -> patient_type}}</span>

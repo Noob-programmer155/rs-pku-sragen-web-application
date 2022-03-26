@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class department_rating_services extends Model
+class blog_tag extends Model
 {
     use HasFactory;
 
-    protected $table = 'department_rating_services';
+    protected $table = 'blog_tag';
     protected $primaryKey = 'id';
     //public $incrementing = true;
     public $timestamps = false;
 
-    protected $fillable = ['service','score'];
+    protected $fillable = ['blog','tag'];
 }

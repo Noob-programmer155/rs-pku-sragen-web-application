@@ -103,25 +103,25 @@
                                             <a href="/">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="/pelayanan-kami">Services</a>
+                                            <a href="/services">Services</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="/dokter-kami">Doctors</a>
+                                            <a href="/doctors">Doctors</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="/blog-kami">Our Blog</a>
+                                            <a href="/blogs">Our Blog</a>
                                             <!-- <a class="page-scroll dd-menu collapsed" href="javascript:void(0)"
                                                 data-bs-toggle="collapse" data-bs-target="#submenu-1-5"
                                                 aria-controls="navbarSupportedContent" aria-expanded="false"
                                                 aria-label="Toggle navigation">Our Blog</a> -->
                                         </li>
                                         <li class="nav-item">
-                                            <a href="/kontak" aria-label="Toggle navigation">Contact</a>
+                                            <a href="/contact" aria-label="Toggle navigation">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="button add-list-button">
-                                    <a href="/buat-janji-temu" class="btn">Book Appointment</a>
+                                    <a href="/appointment" class="btn">Book Appointment</a>
                                 </div>
                             </nav>
 

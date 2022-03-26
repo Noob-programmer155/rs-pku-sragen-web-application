@@ -9,7 +9,7 @@
                 </div>
                 <ul class="breadcrumb-nav">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/departemen-kami">Department</a></li>
+                    <li><a href="/departments">Department</a></li>
                     <li>{{$dep_name}}</li>
                 </ul>
             </div>
@@ -26,8 +26,8 @@
                         <div class="service-sidebar">
                             <section class="single-widget search-widget">
                                 <h3>Search Here</h3>
-                                <form action="#">
-                                    <input type="text" placeholder="Search Here...">
+                                <form action="https://www.google.com/search" method="get" target="_blank">
+                                    <input type="text" name="q" placeholder="Search Here...">
                                     <button type="submit"><i class="lni lni-search-alt"></i></button>
                                 </form>
                             </section>
@@ -35,13 +35,13 @@
                                 <h3>Department Category</h3>
                                 <ul>
                                   <li>
-                                      <a href="/departemen-kami">
+                                      <a href="/departments">
                                           All Departments <i class="lni lni-arrow-right"></i>
                                       </a>
                                   </li>
                                     @foreach($department_list as $deplist)
                                     <li>
-                                        <a href="/departemen/{{$deplist -> name}}?iddep={{$deplist -> id}}">
+                                        <a href="/department/{{$deplist -> name}}?iddep={{$deplist -> id}}">
                                             {{$deplist -> name}} <i class="lni lni-arrow-right"></i>
                                         </a>
                                     </li>
@@ -88,7 +88,7 @@
                                   </tr>
                                   <tr>
                                     <td>Department Rating</td>
-                                    <td><span><ins>{{$dept['rating']['rating']}}</ins>/4.0</span></td>
+                                    <td><span><ins>{{$dept[0] -> rate}}</ins>/4.0</span></td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -109,14 +109,23 @@
                                               <h2 class="wow fadeInDown pb-4">Department Services</h2>
                                               @foreach($dept['services'] as $serv)
                                                 <div class="col-md-6 col-12 p-0">
-                                                    <div class="single-list custom-border-right wow fadeInDown m-0"
-                                                        data-wow-delay=".2s">
-                                                        <img class="shape1" src="/images/service/shape1.svg" alt="#">
-                                                        <img class="shape2" src="/images/service/shape2.svg" alt="#">
-                                                        <i class="lni {{$serv -> icon}}"></i>
-                                                        <h4><a href="/pelayanan/{{$serv -> name}}?idserv={{$serv -> id}}">{{$serv -> name}}</a></h4>
-                                                        <p>{{$serv -> description_title}}</p>
-                                                    </div>
+                                                    <a href="/service/{{$serv -> name}}?idserv={{$serv -> id}}">
+                                                        <div class="single-list custom-border-right wow fadeInDown m-0"
+                                                            data-wow-delay=".2s">
+                                                            <img class="shape1" src="/images/service/shape1.svg" alt="#">
+                                                            <img class="shape2" src="/images/service/shape2.svg" alt="#">
+                                                            <div class="icon-title">
+                                                                <i class="lni {{$serv -> icon}}"></i>
+                                                                <div>
+                                                                    <h4>Rating</h4>
+                                                                    <pre><i class="lni lni-star-filled"></i>{{$serv -> rate}}/<span>4.0</span></pre>
+                                                                    <span><i class="lni lni-user"></i>{{$serv -> count}}</span>
+                                                                </div>
+                                                            </div>
+                                                            <h4>{{$serv -> name}}</h4>
+                                                            <p>{{$serv -> description_title}}</p>
+                                                        </div>
+                                                    </a>
                                                 </div>
                                               @endforeach
                                           </div>
