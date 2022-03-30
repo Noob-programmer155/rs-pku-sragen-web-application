@@ -7332,6 +7332,9 @@ blockquote .shape {
 
 .footer .single-footer.f-about .logo img {
   width: 180px;
+  background-color: #fff;
+  border-radius: 10px;
+  border-bottom: .25rem solid #c8c8c8;
 }
 
 .footer .single-footer.f-about p {
